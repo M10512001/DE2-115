@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 31 17:46:24 2017
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : SDCard_VGA
+Top-level Entity Name : SDCard_VGA
+Family : Cyclone IV E
+Total logic elements : 6,913
+    Total combinational functions : 5,397
+    Dedicated logic registers : 4,162
+Total registers : 4162
+Total pins : 133
+Total virtual pins : 0
+Total memory bits : 76,160
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 1

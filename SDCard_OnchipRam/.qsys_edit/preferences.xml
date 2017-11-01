@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="Qsys_system.clk" showClockDomains="0" showResetDomains="0">
+  <columns>
+   <connections preferredWidth="143" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Memory Interfaces and Controllers/Memory Interfaces with ALTMEMPHY,Library/Memory Interfaces and Controllers/SDRAM,Library/Interface Protocols/JESD,Library,Library/University Program/Clock,Project,Library/Interface Protocols,Library/Memory Interfaces and Controllers,Library/University Program/Memory,Library/University Program" />
+ <window width="1936" height="1056" x="-8" y="-8" />
+ <hdlexample language="VERILOG" />
+</preferences>

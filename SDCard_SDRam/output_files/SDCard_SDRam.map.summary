@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 31 17:30:18 2017
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : SDCard_SDRam
+Top-level Entity Name : SDCard_SDRam
+Family : Cyclone IV E
+Total logic elements : 6,039
+    Total combinational functions : 4,656
+    Dedicated logic registers : 3,582
+Total registers : 3582
+Total pins : 63
+Total virtual pins : 0
+Total memory bits : 69,760
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 1

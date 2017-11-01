@@ -1,0 +1,26 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Qsys_system.timer -pg 1 -lvl 2 -y 130
+preplace inst Qsys_system.altpll -pg 1 -lvl 2 -y 530
+preplace inst Qsys_system.nios2_gen2.clock_bridge -pg 1
+preplace inst Qsys_system.nios2_gen2 -pg 1 -lvl 1 -y 120
+preplace inst Qsys_system.nios2_gen2.reset_bridge -pg 1
+preplace inst Qsys_system.sdram -pg 1 -lvl 2 -y 410
+preplace inst Qsys_system.sd_card -pg 1 -lvl 2 -y 310
+preplace inst Qsys_system.nios2_gen2.cpu -pg 1
+preplace inst Qsys_system.sysid -pg 1 -lvl 2 -y 230
+preplace inst Qsys_system.jtag_uart -pg 1 -lvl 2 -y 30
+preplace inst Qsys_system.clk -pg 1 -lvl 1 -y 550
+preplace inst Qsys_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)sdram.wire,(SLAVE)Qsys_system.sdram_wire) 1 0 2 NJ 480 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)sd_card.conduit_end,(SLAVE)Qsys_system.sd_card_wire) 1 0 2 NJ 360 NJ
+preplace netloc INTERCONNECT<net_container>Qsys_system</net_container>(SLAVE)timer.reset,(SLAVE)altpll.inclk_interface_reset,(SLAVE)sdram.reset,(SLAVE)sysid.reset,(SLAVE)sd_card.reset,(SLAVE)nios2_gen2.reset,(MASTER)clk.clk_reset,(SLAVE)jtag_uart.reset,(MASTER)nios2_gen2.debug_reset_request) 1 0 2 140 260 520
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(MASTER)Qsys_system.sdram_clk,(MASTER)altpll.c1) 1 2 1 N
+preplace netloc INTERCONNECT<net_container>Qsys_system</net_container>(SLAVE)sd_card.avalon_sdcard_slave,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)timer.s1,(MASTER)nios2_gen2.instruction_master,(SLAVE)sysid.control_slave,(SLAVE)sdram.s1,(SLAVE)nios2_gen2.debug_mem_slave,(SLAVE)altpll.pll_slave,(MASTER)nios2_gen2.data_master) 1 0 2 140 80 500
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)clk.clk_in,(SLAVE)Qsys_system.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.reset,(SLAVE)clk.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>Qsys_system</net_container>(SLAVE)jtag_uart.irq,(MASTER)nios2_gen2.irq,(SLAVE)timer.irq) 1 1 1 540
+preplace netloc POINT_TO_POINT<net_container>Qsys_system</net_container>(MASTER)clk.clk,(SLAVE)altpll.inclk_interface) 1 1 1 N
+preplace netloc FAN_OUT<net_container>Qsys_system</net_container>(SLAVE)timer.clk,(SLAVE)jtag_uart.clk,(SLAVE)sdram.clk,(SLAVE)nios2_gen2.clk,(MASTER)altpll.c0,(SLAVE)sysid.clk,(SLAVE)sd_card.clk) 1 0 3 120 60 560 520 780
+levelinfo -pg 1 0 90 890
+levelinfo -hier Qsys_system 100 260 590 800
