@@ -1,5 +1,5 @@
 Flow report for SDCard_SDRam
-Tue Oct 31 17:31:21 2017
+Thu Nov 02 18:15:56 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 31 17:31:21 2017           ;
+; Flow Status                        ; Successful - Thu Nov 02 18:15:56 2017           ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                      ; SDCard_SDRam                                    ;
 ; Top-level Entity Name              ; SDCard_SDRam                                    ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/31/2017 17:29:31 ;
+; Start date & time ; 11/02/2017 18:14:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SDCard_SDRam        ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 114916069636.150944217102440                                  ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 114916069651.150961765906956                                  ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                     ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --             ;
@@ -103,12 +103,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:45     ; 1.0                     ; 1041 MB             ; 00:01:12                           ;
-; Fitter                    ; 00:00:28     ; 1.0                     ; 1989 MB             ; 00:00:40                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 787 MB              ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 1009 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 814 MB              ; 00:00:05                           ;
-; Total                     ; 00:01:29     ; --                      ; --                  ; 00:02:06                           ;
+; Analysis & Synthesis      ; 00:00:39     ; 1.0                     ; 1041 MB             ; 00:01:02                           ;
+; Fitter                    ; 00:00:26     ; 1.0                     ; 1995 MB             ; 00:00:37                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 790 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 2.0                     ; 1009 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 813 MB              ; 00:00:05                           ;
+; Total                     ; 00:01:18     ; --                      ; --                  ; 00:01:52                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

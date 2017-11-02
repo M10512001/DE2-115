@@ -924,3 +924,27 @@ C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -
 16:33:44 **** Incremental Build of configuration Nios II for project SDCard_SDRam_bsp ****
 make all 
 [BSP build complete]
+18:21:32 **** Incremental Build of configuration Nios II for project SDCard_SDRam ****
+make all 
+Info: Building ../SDCard_SDRam_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_SDRam_bsp/
+[BSP build complete]
+[SDCard_SDRam build complete]
+18:21:33 **** Incremental Build of configuration Nios II for project SDCard_SDRam_bsp ****
+make all 
+[BSP build complete]
+18:21:35 **** Incremental Build of configuration Nios II for project SDCard_SDRam ****
+make all 
+Info: Building ../SDCard_SDRam_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_SDRam_bsp/
+[BSP build complete]
+[SDCard_SDRam build complete]
+18:23:25 **** Incremental Build of configuration Nios II for project SDCard_SDRam ****
+make all 
+Info: Building ../SDCard_SDRam_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_SDRam_bsp/
+[BSP build complete]
+[SDCard_SDRam build complete]
+18:23:26 **** Incremental Build of configuration Nios II for project SDCard_SDRam_bsp ****
+make all 
+[BSP build complete]

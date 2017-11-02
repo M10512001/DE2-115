@@ -1,5 +1,5 @@
 EDA Netlist Writer report for SDCard_VGA
-Tue Oct 31 17:47:30 2017
+Thu Nov 02 18:06:57 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Oct 31 17:47:30 2017 ;
+; EDA Netlist Writer Status ; Successful - Thu Nov 02 18:06:57 2017 ;
 ; Revision Name             ; SDCard_VGA                            ;
 ; Top-level Entity Name     ; SDCard_VGA                            ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                     ;
-+----------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                ;
-+----------------------------------------------------------------------------------------------------------------+
-; C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_7_1200mv_85c_slow.vo     ;
-; C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_7_1200mv_0c_slow.vo      ;
-; C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_min_1200mv_0c_fast.vo    ;
-; C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA.vo                       ;
-; C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_7_1200mv_85c_v_slow.sdo  ;
-; C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_7_1200mv_0c_v_slow.sdo   ;
-; C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_v.sdo                    ;
-+----------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                            ;
++-------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                       ;
++-------------------------------------------------------------------------------------------------------+
+; C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_7_1200mv_85c_slow.vo     ;
+; C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_7_1200mv_0c_slow.vo      ;
+; C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_min_1200mv_0c_fast.vo    ;
+; C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA.vo                       ;
+; C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_7_1200mv_85c_v_slow.sdo  ;
+; C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_7_1200mv_0c_v_slow.sdo   ;
+; C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/SDCard_VGA_v.sdo                    ;
++-------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -89,20 +89,20 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Tue Oct 31 17:47:23 2017
+    Info: Processing started: Thu Nov 02 18:06:50 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off SDCard_VGA -c SDCard_VGA
-Info (204019): Generated file SDCard_VGA_7_1200mv_85c_slow.vo in folder "C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file SDCard_VGA_7_1200mv_0c_slow.vo in folder "C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file SDCard_VGA_min_1200mv_0c_fast.vo in folder "C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file SDCard_VGA.vo in folder "C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file SDCard_VGA_7_1200mv_85c_v_slow.sdo in folder "C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file SDCard_VGA_7_1200mv_0c_v_slow.sdo in folder "C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file SDCard_VGA_min_1200mv_0c_v_fast.sdo in folder "C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file SDCard_VGA_v.sdo in folder "C:/Users/M10512001/Documents/GitHub/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file SDCard_VGA_7_1200mv_85c_slow.vo in folder "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file SDCard_VGA_7_1200mv_0c_slow.vo in folder "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file SDCard_VGA_min_1200mv_0c_fast.vo in folder "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file SDCard_VGA.vo in folder "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file SDCard_VGA_7_1200mv_85c_v_slow.sdo in folder "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file SDCard_VGA_7_1200mv_0c_v_slow.sdo in folder "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file SDCard_VGA_min_1200mv_0c_v_fast.sdo in folder "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file SDCard_VGA_v.sdo in folder "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 839 megabytes
-    Info: Processing ended: Tue Oct 31 17:47:31 2017
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 837 megabytes
+    Info: Processing ended: Thu Nov 02 18:06:57 2017
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 
 

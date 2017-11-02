@@ -7288,3 +7288,27 @@ C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -
 16:29:29 **** Incremental Build of configuration Nios II for project SDCard_VGA_bsp ****
 make all 
 [BSP build complete]
+18:09:55 **** Incremental Build of configuration Nios II for project SDCard_VGA ****
+make all 
+Info: Building ../SDCard_VGA_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_bsp/
+[BSP build complete]
+[SDCard_VGA build complete]
+18:09:56 **** Incremental Build of configuration Nios II for project SDCard_VGA_bsp ****
+make all 
+[BSP build complete]
+18:09:58 **** Incremental Build of configuration Nios II for project SDCard_VGA ****
+make all 
+Info: Building ../SDCard_VGA_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_bsp/
+[BSP build complete]
+[SDCard_VGA build complete]
+18:13:05 **** Incremental Build of configuration Nios II for project SDCard_VGA ****
+make all 
+Info: Building ../SDCard_VGA_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_bsp/
+[BSP build complete]
+[SDCard_VGA build complete]
+18:13:05 **** Incremental Build of configuration Nios II for project SDCard_VGA_bsp ****
+make all 
+[BSP build complete]

@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2017/10/31 下午 06:05:04</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1509444304109</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\M10512001\Documents\GitHub\DE2-115\SDCard_SDRam\software\SDCard_SDRam_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2017/11/2 下午 06:21:27</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1509618087202</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\M10512001\Desktop\DE2-115\SDCard_SDRam\software\SDCard_SDRam_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\Qsys_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
