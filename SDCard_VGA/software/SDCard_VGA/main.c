@@ -215,7 +215,7 @@ bool Display_On_VGA(alt_u8 *list, alt_32 len) {
 	// 將 R, G, B 輸出到對映 X, Y 座標點上
 	alt_32 b, g, r, pix;
 	while((y != y_break)) {
-		y+=step;
+		y += step;
 		for(x=x_i; x<x_f; x++) {
 			b = list[bp];
 			g = list[gp];
