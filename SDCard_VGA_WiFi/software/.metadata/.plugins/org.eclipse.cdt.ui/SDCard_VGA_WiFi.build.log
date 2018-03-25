@@ -1,0 +1,9 @@
+14:29:52 **** Incremental Build of configuration Nios II for project SDCard_VGA_WiFi ****
+make all 
+Info: Building ../SDCard_VGA_WiFi_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_WiFi_bsp/
+[BSP build complete]
+[SDCard_VGA_WiFi build complete]
+
+14:29:54 Build Finished (took 2s.164ms)
+
