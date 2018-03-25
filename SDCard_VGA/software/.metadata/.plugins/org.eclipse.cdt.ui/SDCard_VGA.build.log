@@ -1,9 +1,90 @@
-18:13:05 **** Incremental Build of configuration Nios II for project SDCard_VGA ****
+14:45:14 **** Build of configuration Nios II for project SDCard_VGA ****
 make all 
 Info: Building ../SDCard_VGA_bsp/
 C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_bsp/
 [BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../SDCard_VGA_bsp//HAL/inc -I../SDCard_VGA_bsp/ -I../SDCard_VGA_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:41:3: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+   free(list);
+   ^
+main.c:41:3: warning: incompatible implicit declaration of built-in function 'free'
+main.c: In function 'List_SD_Card_Files':
+main.c:67:61: warning: pointer targets in passing argument 2 of 'alt_up_sd_card_find_first' differ in signedness [-Wpointer-sign]
+  alt_16 first_file_result = alt_up_sd_card_find_first("/.", root_filename);
+                                                             ^
+In file included from main.c:11:0:
+../SDCard_VGA_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:60:11: note: expected 'char *' but argument is of type 'alt_8 *'
+ short int alt_up_sd_card_find_first(char *directory_to_search_through, char *file_name);
+           ^
+main.c:70:34: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_find_next' differ in signedness [-Wpointer-sign]
+   while(alt_up_sd_card_find_next(root_filename) != -1)
+                                  ^
+In file included from main.c:11:0:
+../SDCard_VGA_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:86:11: note: expected 'char *' but argument is of type 'alt_8 *'
+ short int alt_up_sd_card_find_next(char *file_name);
+           ^
+main.c: In function 'Get_File_Len':
+main.c:83:34: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_fopen' differ in signedness [-Wpointer-sign]
+  sd_fileh = alt_up_sd_card_fopen(filename, false);
+                                  ^
+In file included from main.c:11:0:
+../SDCard_VGA_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:48:11: note: expected 'char *' but argument is of type 'alt_u8 *'
+ short int alt_up_sd_card_fopen(char *name, bool create);
+           ^
+main.c:92:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+  printf("Info: %s is %d bytes.\n", filename, count);
+  ^
+main.c:92:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c: In function 'File_Read_Into_List':
+main.c:100:2: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  alt_u8 *list = malloc(len * sizeof(alt_u8));
+  ^
+main.c:100:17: warning: incompatible implicit declaration of built-in function 'malloc'
+  alt_u8 *list = malloc(len * sizeof(alt_u8));
+                 ^
+main.c:104:35: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_fopen' differ in signedness [-Wpointer-sign]
+   sd_fileh = alt_up_sd_card_fopen(filename, false);
+                                   ^
+In file included from main.c:11:0:
+../SDCard_VGA_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:48:11: note: expected 'char *' but argument is of type 'alt_u8 *'
+ short int alt_up_sd_card_fopen(char *name, bool create);
+           ^
+main.c: In function 'Display_On_VGA':
+main.c:151:3: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+   height = abs(height);
+   ^
+main.c:153:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+  printf("    (Info) Header and Table is %d bytes.\n", pixel_offset);
+  ^
+main.c:153:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:154:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+  printf("    (Info) %d x %d\n", width, height);
+  ^
+main.c:154:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:154:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:154:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:162:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+   printf("    (Info) Row align bytes is %d.\n", row_align);
+   ^
+main.c:162:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:178:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("    (Info) %d pixels out of Width range.\n", width - VGA_VL);
+   ^
+main.c:178:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+main.c:182:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("    (Info) %d pixels out of Height range.\n", height - VGA_HL);
+   ^
+main.c:182:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+Info: Linking SDCard_VGA.elf
+nios2-elf-g++  -T'../SDCard_VGA_bsp//linker.x' -msys-crt0='../SDCard_VGA_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../SDCard_VGA_bsp/   -Wl,-Map=SDCard_VGA.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o SDCard_VGA.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert SDCard_VGA.elf --thread_model hal --cpu_name nios2_gen2 --qsys true --simulation_enabled false --id 0 --sidp 0x201440 --timestamp 1509003872 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Qsys_system --quartus_project_dir "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA" --jdi ../..//output_files/SDCard_VGA.jdi --sopcinfo C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA/software/SDCard_VGA_bsp/../../Qsys_system.sopcinfo
+Info: (SDCard_VGA.elf) 129 KBytes program size (code + initialized data).
+Info:                  130936 KBytes free for stack + heap.
+Info: Creating SDCard_VGA.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source SDCard_VGA.elf >SDCard_VGA.objdump
 [SDCard_VGA build complete]
 
-18:13:05 Build Finished (took 775ms)
+14:45:21 Build Finished (took 7s.22ms)
 

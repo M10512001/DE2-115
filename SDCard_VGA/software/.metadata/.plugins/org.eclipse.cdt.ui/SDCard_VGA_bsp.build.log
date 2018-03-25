@@ -1,6 +1,6 @@
-18:13:05 **** Incremental Build of configuration Nios II for project SDCard_VGA_bsp ****
+14:45:21 **** Build of configuration Nios II for project SDCard_VGA_bsp ****
 make all 
 [BSP build complete]
 
-18:13:06 Build Finished (took 550ms)
+14:45:22 Build Finished (took 896ms)
 

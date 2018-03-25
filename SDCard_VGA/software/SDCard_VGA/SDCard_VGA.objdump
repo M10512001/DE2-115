@@ -1934,7 +1934,7 @@ bool Display_On_VGA(alt_u8 *list, alt_32 len) {
 	alt_32 b, g, r, pix;
 	while((y != y_break)) {
 10000ac4:	00004306 	br	10000bd4 <Display_On_VGA+0x52c>
-		y+=step;
+		y += step;
 10000ac8:	e0fff517 	ldw	r3,-44(fp)
 10000acc:	e0bff717 	ldw	r2,-36(fp)
 10000ad0:	1885883a 	add	r2,r3,r2
@@ -1997,7 +1997,7 @@ bool Display_On_VGA(alt_u8 *list, alt_32 len) {
 	// 將 R, G, B 輸出到對映 X, Y 座標點上
 	alt_32 b, g, r, pix;
 	while((y != y_break)) {
-		y+=step;
+		y += step;
 		for(x=x_i; x<x_f; x++) {
 10000b8c:	e0bff417 	ldw	r2,-48(fp)
 10000b90:	10800044 	addi	r2,r2,1

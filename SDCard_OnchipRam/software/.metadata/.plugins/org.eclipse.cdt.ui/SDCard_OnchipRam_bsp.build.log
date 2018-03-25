@@ -1,6 +1,6 @@
-18:31:31 **** Incremental Build of configuration Nios II for project SDCard_OnchipRam_bsp ****
+14:49:07 **** Build of configuration Nios II for project SDCard_OnchipRam_bsp ****
 make all 
 [BSP build complete]
 
-18:31:32 Build Finished (took 595ms)
+14:49:08 Build Finished (took 899ms)
 

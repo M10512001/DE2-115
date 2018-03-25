@@ -684,3 +684,12 @@ Info: Building ../SDCard_OnchipRam_bsp/
 C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_OnchipRam_bsp/
 [BSP build complete]
 [SDCard_OnchipRam build complete]
+14:49:05 **** Build of configuration Nios II for project SDCard_OnchipRam ****
+make all 
+Info: Building ../SDCard_OnchipRam_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_OnchipRam_bsp/
+[BSP build complete]
+[SDCard_OnchipRam build complete]
+14:49:07 **** Build of configuration Nios II for project SDCard_OnchipRam_bsp ****
+make all 
+[BSP build complete]

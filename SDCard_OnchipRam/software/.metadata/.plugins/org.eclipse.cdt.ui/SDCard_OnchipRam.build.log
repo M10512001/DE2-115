@@ -1,9 +1,9 @@
-18:31:47 **** Incremental Build of configuration Nios II for project SDCard_OnchipRam ****
+14:49:05 **** Build of configuration Nios II for project SDCard_OnchipRam ****
 make all 
 Info: Building ../SDCard_OnchipRam_bsp/
 C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_OnchipRam_bsp/
 [BSP build complete]
 [SDCard_OnchipRam build complete]
 
-18:31:48 Build Finished (took 684ms)
+14:49:07 Build Finished (took 1s.709ms)
 
