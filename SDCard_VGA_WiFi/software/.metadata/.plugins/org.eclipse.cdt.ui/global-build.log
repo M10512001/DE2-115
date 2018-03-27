@@ -32315,3 +32315,562 @@ Info: Building ../SDCard_VGA_WiFi_bsp/
 C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_WiFi_bsp/
 [BSP build complete]
 [SDCard_VGA_WiFi build complete]
+14:41:30 **** Incremental Build of configuration Nios II for project SDCard_VGA_WiFi ****
+make all 
+Info: Building ../SDCard_VGA_WiFi_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_WiFi_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../SDCard_VGA_WiFi_bsp//HAL/inc -I../SDCard_VGA_WiFi_bsp/ -I../SDCard_VGA_WiFi_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:34:2: warning: implicit declaration of function 'esp8266_init' [-Wimplicit-function-declaration]
+  while (esp8266_init(true) == false)
+  ^
+main.c:37:9: warning: unused variable 'act' [-Wunused-variable]
+  alt_u8 act;
+         ^
+main.c:36:9: warning: unused variable 'reg' [-Wunused-variable]
+  alt_16 reg;
+         ^
+main.c: In function 'Send_Mode':
+main.c:61:2: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+  free(list);
+  ^
+main.c:61:2: warning: incompatible implicit declaration of built-in function 'free'
+main.c: In function 'Receive_Mode':
+main.c:71:2: warning: incompatible implicit declaration of built-in function 'free'
+  free(list);
+  ^
+main.c: In function 'List_SD_Card_Files':
+main.c:95:61: warning: pointer targets in passing argument 2 of 'alt_up_sd_card_find_first' differ in signedness [-Wpointer-sign]
+  alt_16 first_file_result = alt_up_sd_card_find_first("/.", root_filename);
+                                                             ^
+In file included from main.c:12:0:
+../SDCard_VGA_WiFi_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:60:11: note: expected 'char *' but argument is of type 'alt_8 *'
+ short int alt_up_sd_card_find_first(char *directory_to_search_through, char *file_name);
+           ^
+main.c:98:34: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_find_next' differ in signedness [-Wpointer-sign]
+   while(alt_up_sd_card_find_next(root_filename) != -1)
+                                  ^
+In file included from main.c:12:0:
+../SDCard_VGA_WiFi_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:86:11: note: expected 'char *' but argument is of type 'alt_8 *'
+ short int alt_up_sd_card_find_next(char *file_name);
+           ^
+main.c: In function 'Get_File_Len':
+main.c:111:34: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_fopen' differ in signedness [-Wpointer-sign]
+  sd_fileh = alt_up_sd_card_fopen(filename, false);
+                                  ^
+In file included from main.c:12:0:
+../SDCard_VGA_WiFi_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:48:11: note: expected 'char *' but argument is of type 'alt_u8 *'
+ short int alt_up_sd_card_fopen(char *name, bool create);
+           ^
+main.c:120:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+  printf("Info: %s is %d bytes.\n", filename, count);
+  ^
+main.c:120:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c: In function 'File_Read_Into_List':
+main.c:128:2: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  alt_u8 *list = malloc(len * sizeof(alt_u8));
+  ^
+main.c:128:17: warning: incompatible implicit declaration of built-in function 'malloc'
+  alt_u8 *list = malloc(len * sizeof(alt_u8));
+                 ^
+main.c:132:35: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_fopen' differ in signedness [-Wpointer-sign]
+   sd_fileh = alt_up_sd_card_fopen(filename, false);
+                                   ^
+In file included from main.c:12:0:
+../SDCard_VGA_WiFi_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:48:11: note: expected 'char *' but argument is of type 'alt_u8 *'
+ short int alt_up_sd_card_fopen(char *name, bool create);
+           ^
+main.c: In function 'Display_On_VGA':
+main.c:179:3: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+   height = abs(height);
+   ^
+main.c:181:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+  printf("    (Info) Header and Table is %d bytes.\n", pixel_offset);
+  ^
+main.c:181:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:182:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+  printf("    (Info) %d x %d\n", width, height);
+  ^
+main.c:182:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:182:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:182:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:190:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+   printf("    (Info) Row align bytes is %d.\n", row_align);
+   ^
+main.c:190:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:206:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("    (Info) %d pixels out of Width range.\n", width - VGA_VL);
+   ^
+main.c:206:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+main.c:210:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("    (Info) %d pixels out of Height range.\n", height - VGA_HL);
+   ^
+main.c:210:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+main.c: In function 'Send_File':
+main.c:277:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(cmd_buffer, "AT+CIPSTART=\"TCP\",\"%s\",%s", ip, port);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:278:2: warning: implicit declaration of function 'esp8266_send_command' [-Wimplicit-function-declaration]
+  success = esp8266_send_command(cmd_buffer);
+  ^
+main.c:284:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(packet, "FILE_LEN-%d", len);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:284:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+  sprintf(packet, "FILE_LEN-%d", len);
+  ^
+main.c:284:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:285:26: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  alt_32 str_len = strlen(packet);
+                          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:33:9: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+main.c:286:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(cmd_buffer, "AT+CIPSEND=%d", str_len);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:286:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+  sprintf(cmd_buffer, "AT+CIPSEND=%d", str_len);
+  ^
+main.c:286:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:288:2: warning: implicit declaration of function 'esp8266_send_data' [-Wimplicit-function-declaration]
+  success = esp8266_send_data(packet, str_len);
+  ^
+main.c:301:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+            ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:301:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+    ^
+main.c:301:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:308:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+            ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:308:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+    ^
+main.c:308:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:315:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+            ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:315:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+    ^
+main.c:315:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:325:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(cmd_buffer, "AT+CIPSEND=%d", 6);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c: In function 'Receive_File':
+main.c:351:3: warning: too many arguments for format [-Wformat-extra-args]
+   printf("    (Info) Server started Successfully.\n", port);
+   ^
+main.c:351:3: warning: too many arguments for format [-Wformat-extra-args]
+main.c:354:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(cmd_buffer, "AT+CIPSERVER=1,%s", port);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:362:3: warning: implicit declaration of function 'esp8266_listen' [-Wimplicit-function-declaration]
+   packet = esp8266_listen();
+   ^
+main.c:362:10: warning: assignment makes pointer from integer without a cast
+   packet = esp8266_listen();
+          ^
+main.c:363:13: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+   if(strstr(packet, "FILE_LEN-") != NULL) {
+             ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:40:8: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ char  *_EXFUN(strstr,(const char *, const char *));
+        ^
+main.c:368:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+  printf("    (Info) The File Size to be received is %d Bytes.\n", *len);
+  ^
+main.c:368:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:370:17: warning: incompatible implicit declaration of built-in function 'malloc'
+  alt_u8 *list = malloc(*len * sizeof(alt_u8));
+                 ^
+main.c:377:13: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+   if(strstr(packet, "0,CLOSED") != NULL)
+             ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:40:8: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ char  *_EXFUN(strstr,(const char *, const char *));
+        ^
+main.c:379:10: warning: assignment makes pointer from integer without a cast
+   packet = esp8266_listen();
+          ^
+main.c:381:19: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+   packet = strstr(packet, ":");
+                   ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:40:8: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ char  *_EXFUN(strstr,(const char *, const char *));
+        ^
+main.c:381:10: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+   packet = strstr(packet, ":");
+          ^
+main.c:390:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+   printf("    (Info) File transfer Interrupted at %d Bytes.\n", i);
+   ^
+main.c:390:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:395:3: warning: too many arguments for format [-Wformat-extra-args]
+   printf("    (Info) Server closed Successfully.\n", port);
+   ^
+main.c:395:3: warning: too many arguments for format [-Wformat-extra-args]
+main.c:397:3: warning: too many arguments for format [-Wformat-extra-args]
+   printf("    (Info) Failed to close Server.\n", port);
+   ^
+main.c:397:3: warning: too many arguments for format [-Wformat-extra-args]
+main.c: At top level:
+main.c:401:8: error: redefinition of 'Get_File_Len'
+ alt_32 Get_File_Len(alt_u8 *packet) {
+        ^
+main.c:106:8: note: previous definition of 'Get_File_Len' was here
+ alt_32 Get_File_Len(alt_u8 *filename) {
+        ^
+main.c: In function 'Get_File_Len':
+main.c:410:26: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  alt_u8 *number = strstr(packet, "-");
+                          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:40:8: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ char  *_EXFUN(strstr,(const char *, const char *));
+        ^
+main.c:410:19: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  alt_u8 *number = strstr(packet, "-");
+                   ^
+make: *** [obj/default/main.o] Error 1
+14:41:33 **** Incremental Build of configuration Nios II for project SDCard_VGA_WiFi_bsp ****
+make all 
+[BSP build complete]
+14:43:46 **** Incremental Build of configuration Nios II for project SDCard_VGA_WiFi ****
+make all 
+Info: Building ../SDCard_VGA_WiFi_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_WiFi_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../SDCard_VGA_WiFi_bsp//HAL/inc -I../SDCard_VGA_WiFi_bsp/ -I../SDCard_VGA_WiFi_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:34:2: warning: implicit declaration of function 'esp8266_init' [-Wimplicit-function-declaration]
+  while (esp8266_init(true) == false)
+  ^
+main.c:37:9: warning: unused variable 'act' [-Wunused-variable]
+  alt_u8 act;
+         ^
+main.c:36:9: warning: unused variable 'reg' [-Wunused-variable]
+  alt_16 reg;
+         ^
+main.c: In function 'Send_Mode':
+main.c:61:2: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+  free(list);
+  ^
+main.c:61:2: warning: incompatible implicit declaration of built-in function 'free'
+main.c: In function 'Receive_Mode':
+main.c:71:2: warning: incompatible implicit declaration of built-in function 'free'
+  free(list);
+  ^
+main.c: In function 'List_SD_Card_Files':
+main.c:95:61: warning: pointer targets in passing argument 2 of 'alt_up_sd_card_find_first' differ in signedness [-Wpointer-sign]
+  alt_16 first_file_result = alt_up_sd_card_find_first("/.", root_filename);
+                                                             ^
+In file included from main.c:12:0:
+../SDCard_VGA_WiFi_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:60:11: note: expected 'char *' but argument is of type 'alt_8 *'
+ short int alt_up_sd_card_find_first(char *directory_to_search_through, char *file_name);
+           ^
+main.c:98:34: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_find_next' differ in signedness [-Wpointer-sign]
+   while(alt_up_sd_card_find_next(root_filename) != -1)
+                                  ^
+In file included from main.c:12:0:
+../SDCard_VGA_WiFi_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:86:11: note: expected 'char *' but argument is of type 'alt_8 *'
+ short int alt_up_sd_card_find_next(char *file_name);
+           ^
+main.c: In function 'Get_File_Len':
+main.c:111:34: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_fopen' differ in signedness [-Wpointer-sign]
+  sd_fileh = alt_up_sd_card_fopen(filename, false);
+                                  ^
+In file included from main.c:12:0:
+../SDCard_VGA_WiFi_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:48:11: note: expected 'char *' but argument is of type 'alt_u8 *'
+ short int alt_up_sd_card_fopen(char *name, bool create);
+           ^
+main.c:120:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+  printf("Info: %s is %d bytes.\n", filename, count);
+  ^
+main.c:120:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c: In function 'File_Read_Into_List':
+main.c:128:2: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  alt_u8 *list = malloc(len * sizeof(alt_u8));
+  ^
+main.c:128:17: warning: incompatible implicit declaration of built-in function 'malloc'
+  alt_u8 *list = malloc(len * sizeof(alt_u8));
+                 ^
+main.c:132:35: warning: pointer targets in passing argument 1 of 'alt_up_sd_card_fopen' differ in signedness [-Wpointer-sign]
+   sd_fileh = alt_up_sd_card_fopen(filename, false);
+                                   ^
+In file included from main.c:12:0:
+../SDCard_VGA_WiFi_bsp//drivers/inc/Altera_UP_SD_Card_Avalon_Interface.h:48:11: note: expected 'char *' but argument is of type 'alt_u8 *'
+ short int alt_up_sd_card_fopen(char *name, bool create);
+           ^
+main.c: In function 'Display_On_VGA':
+main.c:179:3: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+   height = abs(height);
+   ^
+main.c:181:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+  printf("    (Info) Header and Table is %d bytes.\n", pixel_offset);
+  ^
+main.c:181:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:182:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+  printf("    (Info) %d x %d\n", width, height);
+  ^
+main.c:182:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:182:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:182:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:190:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+   printf("    (Info) Row align bytes is %d.\n", row_align);
+   ^
+main.c:190:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:206:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("    (Info) %d pixels out of Width range.\n", width - VGA_VL);
+   ^
+main.c:206:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+main.c:210:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("    (Info) %d pixels out of Height range.\n", height - VGA_HL);
+   ^
+main.c:210:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+main.c: In function 'Send_File':
+main.c:277:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(cmd_buffer, "AT+CIPSTART=\"TCP\",\"%s\",%s", ip, port);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:278:2: warning: implicit declaration of function 'esp8266_send_command' [-Wimplicit-function-declaration]
+  success = esp8266_send_command(cmd_buffer);
+  ^
+main.c:284:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(packet, "FILE_LEN-%d", len);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:284:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+  sprintf(packet, "FILE_LEN-%d", len);
+  ^
+main.c:284:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:285:26: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  alt_32 str_len = strlen(packet);
+                          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:33:9: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+main.c:286:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(cmd_buffer, "AT+CIPSEND=%d", str_len);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:286:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+  sprintf(cmd_buffer, "AT+CIPSEND=%d", str_len);
+  ^
+main.c:286:2: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:288:2: warning: implicit declaration of function 'esp8266_send_data' [-Wimplicit-function-declaration]
+  success = esp8266_send_data(packet, str_len);
+  ^
+main.c:301:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+            ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:301:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+    ^
+main.c:301:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:308:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+            ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:308:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+    ^
+main.c:308:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:315:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+            ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:315:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+    sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
+    ^
+main.c:315:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'alt_32' [-Wformat=]
+main.c:325:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(cmd_buffer, "AT+CIPSEND=%d", 6);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c: In function 'Receive_File':
+main.c:351:3: warning: too many arguments for format [-Wformat-extra-args]
+   printf("    (Info) Server started Successfully.\n", port);
+   ^
+main.c:351:3: warning: too many arguments for format [-Wformat-extra-args]
+main.c:354:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(cmd_buffer, "AT+CIPSERVER=1,%s", port);
+          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:257:5: note: expected 'char *' but argument is of type 'alt_u8 *'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+main.c:362:3: warning: implicit declaration of function 'esp8266_listen' [-Wimplicit-function-declaration]
+   packet = esp8266_listen();
+   ^
+main.c:362:10: warning: assignment makes pointer from integer without a cast
+   packet = esp8266_listen();
+          ^
+main.c:363:13: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+   if(strstr(packet, "FILE_LEN-") != NULL) {
+             ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:40:8: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ char  *_EXFUN(strstr,(const char *, const char *));
+        ^
+main.c:368:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+  printf("    (Info) The File Size to be received is %d Bytes.\n", *len);
+  ^
+main.c:368:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:370:17: warning: incompatible implicit declaration of built-in function 'malloc'
+  alt_u8 *list = malloc(*len * sizeof(alt_u8));
+                 ^
+main.c:377:13: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+   if(strstr(packet, "0,CLOSED") != NULL)
+             ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:40:8: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ char  *_EXFUN(strstr,(const char *, const char *));
+        ^
+main.c:379:10: warning: assignment makes pointer from integer without a cast
+   packet = esp8266_listen();
+          ^
+main.c:381:19: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+   packet = strstr(packet, ":");
+                   ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:40:8: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ char  *_EXFUN(strstr,(const char *, const char *));
+        ^
+main.c:381:10: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+   packet = strstr(packet, ":");
+          ^
+main.c:390:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+   printf("    (Info) File transfer Interrupted at %d Bytes.\n", i);
+   ^
+main.c:390:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'alt_32' [-Wformat=]
+main.c:395:3: warning: too many arguments for format [-Wformat-extra-args]
+   printf("    (Info) Server closed Successfully.\n", port);
+   ^
+main.c:395:3: warning: too many arguments for format [-Wformat-extra-args]
+main.c:397:3: warning: too many arguments for format [-Wformat-extra-args]
+   printf("    (Info) Failed to close Server.\n", port);
+   ^
+main.c:397:3: warning: too many arguments for format [-Wformat-extra-args]
+main.c: In function 'Get_Data_Len':
+main.c:410:26: warning: pointer targets in passing argument 1 of 'strstr' differ in signedness [-Wpointer-sign]
+  alt_u8 *number = strstr(packet, "-");
+                          ^
+In file included from c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from main.c:9:
+c:\altera\15.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\string.h:40:8: note: expected 'const char *' but argument is of type 'alt_u8 *'
+ char  *_EXFUN(strstr,(const char *, const char *));
+        ^
+main.c:410:19: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  alt_u8 *number = strstr(packet, "-");
+                   ^
+Info: Linking SDCard_VGA_WiFi.elf
+nios2-elf-g++  -T'../SDCard_VGA_WiFi_bsp//linker.x' -msys-crt0='../SDCard_VGA_WiFi_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../SDCard_VGA_WiFi_bsp/   -Wl,-Map=SDCard_VGA_WiFi.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o SDCard_VGA_WiFi.elf obj/default/esp8266.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert SDCard_VGA_WiFi.elf --thread_model hal --cpu_name nios2_gen2 --qsys true --simulation_enabled false --id 0 --sidp 0x201498 --timestamp 1509688160 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Qsys_system --quartus_project_dir "C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA_WiFi" --jdi ../..//output_files/SDCard_VGA_WiFi.jdi --sopcinfo C:/Users/M10512001/Desktop/DE2-115/SDCard_VGA_WiFi/software/SDCard_VGA_WiFi_bsp/../../Qsys_system.sopcinfo
+Info: (SDCard_VGA_WiFi.elf) 140 KBytes program size (code + initialized data).
+Info:                       130923 KBytes free for stack + heap.
+Info: Creating SDCard_VGA_WiFi.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source SDCard_VGA_WiFi.elf >SDCard_VGA_WiFi.objdump
+[SDCard_VGA_WiFi build complete]
+14:43:52 **** Incremental Build of configuration Nios II for project SDCard_VGA_WiFi_bsp ****
+make all 
+[BSP build complete]
+14:44:16 **** Incremental Build of configuration Nios II for project SDCard_VGA_WiFi ****
+make all 
+Info: Building ../SDCard_VGA_WiFi_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../SDCard_VGA_WiFi_bsp/
+[BSP build complete]
+[SDCard_VGA_WiFi build complete]
+14:44:17 **** Incremental Build of configuration Nios II for project SDCard_VGA_WiFi_bsp ****
+make all 
+[BSP build complete]

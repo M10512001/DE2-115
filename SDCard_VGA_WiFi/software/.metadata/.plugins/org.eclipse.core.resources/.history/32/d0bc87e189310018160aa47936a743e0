@@ -264,9 +264,11 @@ bool Display_On_VGA(alt_u8 *list, alt_32 len) {
 
 bool Send_File(alt_u8 *list, alt_32 len) {
 	alt_u8 ip[20], port[10];
+	alt_32 i, j = 0;
+	alt_32 EOF_Byte = len - 1;
+	alt_u8 packet[2048];
 	bool success = false;
 	alt_u8 cmd_buffer[2048];
-	alt_u8 packet[2048];
 	printf("Info: Enter the Receiver's IPv4 Address.\n");
 	scanf("%s", ip);
 	printf("\n");
@@ -291,8 +293,6 @@ bool Send_File(alt_u8 *list, alt_32 len) {
 		return false;
 	}
 	// 開始發送封包
-	alt_32 EOF_Byte = len - 1;
-	alt_32 i, j = 0;
 	for(i=0; i<len; i++) {
 		packet[j] = list[i];
 		j += 1;

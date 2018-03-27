@@ -35,49 +35,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   8 .debug_aranges 00001608  00000000  00000000  00023d10  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   0003dbf3  00000000  00000000  00025318  2**0
+  9 .debug_info   0003dbf7  00000000  00000000  00025318  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 0000ed8b  00000000  00000000  00062f0b  2**0
+ 10 .debug_abbrev 0000ed8b  00000000  00000000  00062f0f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0001354c  00000000  00000000  00071c96  2**0
+ 11 .debug_line   0001354c  00000000  00000000  00071c9a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  00003a7c  00000000  00000000  000851e4  2**2
+ 12 .debug_frame  00003a7c  00000000  00000000  000851e8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    000057aa  00000000  00000000  00088c60  2**0
+ 13 .debug_str    000057aa  00000000  00000000  00088c64  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    00025013  00000000  00000000  0008e40a  2**0
+ 14 .debug_loc    00025013  00000000  00000000  0008e40e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000060  00000000  00000000  000b3420  2**2
+ 15 .debug_alt_sim_info 00000060  00000000  00000000  000b3424  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 000022a8  00000000  00000000  000b3480  2**3
+ 16 .debug_ranges 000022a8  00000000  00000000  000b3488  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  000ba553  2**0
+ 17 .thread_model 00000003  00000000  00000000  000ba55b  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000a  00000000  00000000  000ba556  2**0
+ 18 .cpu          0000000a  00000000  00000000  000ba55e  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  000ba560  2**0
+ 19 .qsys         00000001  00000000  00000000  000ba568  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  000ba561  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  000ba569  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  000ba562  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  000ba56a  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  000ba566  2**0
+ 22 .sysid_base   00000004  00000000  00000000  000ba56e  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  000ba56a  2**0
+ 23 .sysid_time   00000004  00000000  00000000  000ba572  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   00000009  00000000  00000000  000ba56e  2**0
+ 24 .stderr_dev   00000009  00000000  00000000  000ba576  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    00000009  00000000  00000000  000ba577  2**0
+ 25 .stdin_dev    00000009  00000000  00000000  000ba57f  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   00000009  00000000  00000000  000ba580  2**0
+ 26 .stdout_dev   00000009  00000000  00000000  000ba588  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 0000000b  00000000  00000000  000ba589  2**0
+ 27 .sopc_system_name 0000000b  00000000  00000000  000ba591  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000032  00000000  00000000  000ba594  2**0
+ 28 .quartus_project_dir 00000032  00000000  00000000  000ba59c  2**0
                   CONTENTS, READONLY
- 29 .jdi          00004065  00000000  00000000  000ba5c6  2**0
+ 29 .jdi          00004065  00000000  00000000  000ba5ce  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     00081a9d  00000000  00000000  000be62b  2**0
+ 30 .sopcinfo     00081a9d  00000000  00000000  000be633  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 10000000 l    d  .entry	00000000 .entry
@@ -2665,135 +2665,135 @@ bool Send_File(alt_u8 *list, alt_32 len) {
 100011d8:	e13ffe15 	stw	r4,-8(fp)
 100011dc:	e17fff15 	stw	r5,-4(fp)
 	alt_u8 ip[20], port[10];
-	alt_32 i, j = 0;
-100011e0:	e03bf215 	stw	zero,-4152(fp)
-	alt_32 EOF_Byte = len - 1;
-100011e4:	e0bfff17 	ldw	r2,-4(fp)
-100011e8:	10bfffc4 	addi	r2,r2,-1
-100011ec:	e0bbf415 	stw	r2,-4144(fp)
-	alt_u8 packet[2048];
 	bool success = false;
-100011f0:	e03bf315 	stw	zero,-4148(fp)
+100011e0:	e03bf115 	stw	zero,-4156(fp)
 	alt_u8 cmd_buffer[2048];
+	alt_u8 packet[2048];
 	printf("Info: Enter the Receiver's IPv4 Address.\n");
-100011f4:	010400b4 	movhi	r4,4098
-100011f8:	21016904 	addi	r4,r4,1444
-100011fc:	0003cd80 	call	10003cd8 <puts>
+100011e4:	010400b4 	movhi	r4,4098
+100011e8:	21016904 	addi	r4,r4,1444
+100011ec:	0003cd80 	call	10003cd8 <puts>
 	scanf("%s", ip);
-10001200:	e0bbf604 	addi	r2,fp,-4136
-10001204:	010400b4 	movhi	r4,4098
-10001208:	21009404 	addi	r4,r4,592
-1000120c:	100b883a 	mov	r5,r2
-10001210:	0003f300 	call	10003f30 <scanf>
+100011f0:	e0bbf604 	addi	r2,fp,-4136
+100011f4:	010400b4 	movhi	r4,4098
+100011f8:	21009404 	addi	r4,r4,592
+100011fc:	100b883a 	mov	r5,r2
+10001200:	0003f300 	call	10003f30 <scanf>
 	printf("\n");
-10001214:	01000284 	movi	r4,10
-10001218:	0003c180 	call	10003c18 <putchar>
+10001204:	01000284 	movi	r4,10
+10001208:	0003c180 	call	10003c18 <putchar>
 	printf("Info: Enter the Receiver's Data Port.\n");
-1000121c:	010400b4 	movhi	r4,4098
-10001220:	21017404 	addi	r4,r4,1488
-10001224:	0003cd80 	call	10003cd8 <puts>
+1000120c:	010400b4 	movhi	r4,4098
+10001210:	21017404 	addi	r4,r4,1488
+10001214:	0003cd80 	call	10003cd8 <puts>
 	scanf("%s", port);
-10001228:	e0bbfb04 	addi	r2,fp,-4116
-1000122c:	010400b4 	movhi	r4,4098
-10001230:	21009404 	addi	r4,r4,592
-10001234:	100b883a 	mov	r5,r2
-10001238:	0003f300 	call	10003f30 <scanf>
+10001218:	e0bbfb04 	addi	r2,fp,-4116
+1000121c:	010400b4 	movhi	r4,4098
+10001220:	21009404 	addi	r4,r4,592
+10001224:	100b883a 	mov	r5,r2
+10001228:	0003f300 	call	10003f30 <scanf>
 	printf("    (Info) Receiver is %s:%s.\n", ip, port);
-1000123c:	e0fbf604 	addi	r3,fp,-4136
-10001240:	e0bbfb04 	addi	r2,fp,-4116
-10001244:	010400b4 	movhi	r4,4098
-10001248:	21017e04 	addi	r4,r4,1528
-1000124c:	180b883a 	mov	r5,r3
-10001250:	100d883a 	mov	r6,r2
-10001254:	0003bd40 	call	10003bd4 <printf>
+1000122c:	e0fbf604 	addi	r3,fp,-4136
+10001230:	e0bbfb04 	addi	r2,fp,-4116
+10001234:	010400b4 	movhi	r4,4098
+10001238:	21017e04 	addi	r4,r4,1528
+1000123c:	180b883a 	mov	r5,r3
+10001240:	100d883a 	mov	r6,r2
+10001244:	0003bd40 	call	10003bd4 <printf>
 	// 建立 TCP 連線
 	sprintf(cmd_buffer, "AT+CIPSTART=\"TCP\",\"%s\",%s", ip, port);
-10001258:	e13dfd84 	addi	r4,fp,-2058
-1000125c:	e0fbf604 	addi	r3,fp,-4136
-10001260:	e0bbfb04 	addi	r2,fp,-4116
-10001264:	014400b4 	movhi	r5,4098
-10001268:	29418604 	addi	r5,r5,1560
-1000126c:	180d883a 	mov	r6,r3
-10001270:	100f883a 	mov	r7,r2
-10001274:	0003ff00 	call	10003ff0 <sprintf>
+10001248:	e13bfd84 	addi	r4,fp,-4106
+1000124c:	e0fbf604 	addi	r3,fp,-4136
+10001250:	e0bbfb04 	addi	r2,fp,-4116
+10001254:	014400b4 	movhi	r5,4098
+10001258:	29418604 	addi	r5,r5,1560
+1000125c:	180d883a 	mov	r6,r3
+10001260:	100f883a 	mov	r7,r2
+10001264:	0003ff00 	call	10003ff0 <sprintf>
 	success = esp8266_send_command(cmd_buffer);
-10001278:	e0bdfd84 	addi	r2,fp,-2058
-1000127c:	1009883a 	mov	r4,r2
-10001280:	00004a00 	call	100004a0 <esp8266_send_command>
-10001284:	e0bbf315 	stw	r2,-4148(fp)
+10001268:	e0bbfd84 	addi	r2,fp,-4106
+1000126c:	1009883a 	mov	r4,r2
+10001270:	00004a00 	call	100004a0 <esp8266_send_command>
+10001274:	e0bbf115 	stw	r2,-4156(fp)
 	if(!success) {
-10001288:	e0bbf317 	ldw	r2,-4148(fp)
-1000128c:	1000051e 	bne	r2,zero,100012a4 <Send_File+0xdc>
+10001278:	e0bbf117 	ldw	r2,-4156(fp)
+1000127c:	1000051e 	bne	r2,zero,10001294 <Send_File+0xcc>
 		printf("    (Info) Failed to Create Session.\n");
-10001290:	010400b4 	movhi	r4,4098
-10001294:	21018d04 	addi	r4,r4,1588
-10001298:	0003cd80 	call	10003cd8 <puts>
+10001280:	010400b4 	movhi	r4,4098
+10001284:	21018d04 	addi	r4,r4,1588
+10001288:	0003cd80 	call	10003cd8 <puts>
 		return false;
-1000129c:	0005883a 	mov	r2,zero
-100012a0:	00009406 	br	100014f4 <Send_File+0x32c>
+1000128c:	0005883a 	mov	r2,zero
+10001290:	00009806 	br	100014f4 <Send_File+0x32c>
 	}
 	// 告知接收端即將傳送的檔案大小
 	sprintf(packet, "FILE_LEN-%d", len);
-100012a4:	e0bbfd84 	addi	r2,fp,-4106
-100012a8:	1009883a 	mov	r4,r2
-100012ac:	014400b4 	movhi	r5,4098
-100012b0:	29419704 	addi	r5,r5,1628
-100012b4:	e1bfff17 	ldw	r6,-4(fp)
-100012b8:	0003ff00 	call	10003ff0 <sprintf>
+10001294:	e0bdfd84 	addi	r2,fp,-2058
+10001298:	1009883a 	mov	r4,r2
+1000129c:	014400b4 	movhi	r5,4098
+100012a0:	29419704 	addi	r5,r5,1628
+100012a4:	e1bfff17 	ldw	r6,-4(fp)
+100012a8:	0003ff00 	call	10003ff0 <sprintf>
 	alt_32 str_len = strlen(packet);
+100012ac:	e0bdfd84 	addi	r2,fp,-2058
+100012b0:	1009883a 	mov	r4,r2
+100012b4:	00042fc0 	call	100042fc <strlen>
+100012b8:	e0bbf415 	stw	r2,-4144(fp)
+	sprintf(cmd_buffer, "AT+CIPSEND=%d", str_len);
 100012bc:	e0bbfd84 	addi	r2,fp,-4106
 100012c0:	1009883a 	mov	r4,r2
-100012c4:	00042fc0 	call	100042fc <strlen>
-100012c8:	e0bbf515 	stw	r2,-4140(fp)
-	sprintf(cmd_buffer, "AT+CIPSEND=%d", str_len);
-100012cc:	e0bdfd84 	addi	r2,fp,-2058
-100012d0:	1009883a 	mov	r4,r2
-100012d4:	014400b4 	movhi	r5,4098
-100012d8:	29419a04 	addi	r5,r5,1640
-100012dc:	e1bbf517 	ldw	r6,-4140(fp)
-100012e0:	0003ff00 	call	10003ff0 <sprintf>
+100012c4:	014400b4 	movhi	r5,4098
+100012c8:	29419a04 	addi	r5,r5,1640
+100012cc:	e1bbf417 	ldw	r6,-4144(fp)
+100012d0:	0003ff00 	call	10003ff0 <sprintf>
 	success = esp8266_send_command(cmd_buffer);
+100012d4:	e0bbfd84 	addi	r2,fp,-4106
+100012d8:	1009883a 	mov	r4,r2
+100012dc:	00004a00 	call	100004a0 <esp8266_send_command>
+100012e0:	e0bbf115 	stw	r2,-4156(fp)
+	success = esp8266_send_data(packet, str_len);
 100012e4:	e0bdfd84 	addi	r2,fp,-2058
 100012e8:	1009883a 	mov	r4,r2
-100012ec:	00004a00 	call	100004a0 <esp8266_send_command>
-100012f0:	e0bbf315 	stw	r2,-4148(fp)
-	success = esp8266_send_data(packet, str_len);
-100012f4:	e0bbfd84 	addi	r2,fp,-4106
-100012f8:	1009883a 	mov	r4,r2
-100012fc:	e17bf517 	ldw	r5,-4140(fp)
-10001300:	00005c80 	call	100005c8 <esp8266_send_data>
-10001304:	e0bbf315 	stw	r2,-4148(fp)
+100012ec:	e17bf417 	ldw	r5,-4144(fp)
+100012f0:	00005c80 	call	100005c8 <esp8266_send_data>
+100012f4:	e0bbf115 	stw	r2,-4156(fp)
 	if(!success) {
-10001308:	e0bbf317 	ldw	r2,-4148(fp)
-1000130c:	1000051e 	bne	r2,zero,10001324 <Send_File+0x15c>
+100012f8:	e0bbf117 	ldw	r2,-4156(fp)
+100012fc:	1000051e 	bne	r2,zero,10001314 <Send_File+0x14c>
 		printf("    (Info) Failed to Inform Data Size.\n");
-10001310:	010400b4 	movhi	r4,4098
-10001314:	21019e04 	addi	r4,r4,1656
-10001318:	0003cd80 	call	10003cd8 <puts>
+10001300:	010400b4 	movhi	r4,4098
+10001304:	21019e04 	addi	r4,r4,1656
+10001308:	0003cd80 	call	10003cd8 <puts>
 		return false;
-1000131c:	0005883a 	mov	r2,zero
-10001320:	00007406 	br	100014f4 <Send_File+0x32c>
+1000130c:	0005883a 	mov	r2,zero
+10001310:	00007806 	br	100014f4 <Send_File+0x32c>
 	}
 	// 開始發送封包
+	alt_32 EOF_Byte = len - 1;
+10001314:	e0bfff17 	ldw	r2,-4(fp)
+10001318:	10bfffc4 	addi	r2,r2,-1
+1000131c:	e0bbf515 	stw	r2,-4140(fp)
+	alt_32 i, j = 0;
+10001320:	e03bf315 	stw	zero,-4148(fp)
 	for(i=0; i<len; i++) {
-10001324:	e03bf115 	stw	zero,-4156(fp)
+10001324:	e03bf215 	stw	zero,-4152(fp)
 10001328:	00005106 	br	10001470 <Send_File+0x2a8>
 		packet[j] = list[i];
-1000132c:	e0bbf117 	ldw	r2,-4156(fp)
+1000132c:	e0bbf217 	ldw	r2,-4152(fp)
 10001330:	e0fffe17 	ldw	r3,-8(fp)
 10001334:	1885883a 	add	r2,r3,r2
 10001338:	10c00003 	ldbu	r3,0(r2)
-1000133c:	e13bfd84 	addi	r4,fp,-4106
-10001340:	e0bbf217 	ldw	r2,-4152(fp)
+1000133c:	e13dfd84 	addi	r4,fp,-2058
+10001340:	e0bbf317 	ldw	r2,-4148(fp)
 10001344:	2085883a 	add	r2,r4,r2
 10001348:	10c00005 	stb	r3,0(r2)
 		j += 1;
-1000134c:	e0bbf217 	ldw	r2,-4152(fp)
+1000134c:	e0bbf317 	ldw	r2,-4148(fp)
 10001350:	10800044 	addi	r2,r2,1
-10001354:	e0bbf215 	stw	r2,-4152(fp)
+10001354:	e0bbf315 	stw	r2,-4148(fp)
 		// 遇到換行字元時發送封包
 		if(list[i] == 10) {
-10001358:	e0bbf117 	ldw	r2,-4156(fp)
+10001358:	e0bbf217 	ldw	r2,-4152(fp)
 1000135c:	e0fffe17 	ldw	r3,-8(fp)
 10001360:	1885883a 	add	r2,r3,r2
 10001364:	10800003 	ldbu	r2,0(r2)
@@ -2801,78 +2801,78 @@ bool Send_File(alt_u8 *list, alt_32 len) {
 1000136c:	10800298 	cmpnei	r2,r2,10
 10001370:	1000101e 	bne	r2,zero,100013b4 <Send_File+0x1ec>
 			sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
-10001374:	e0bdfd84 	addi	r2,fp,-2058
+10001374:	e0bbfd84 	addi	r2,fp,-4106
 10001378:	1009883a 	mov	r4,r2
 1000137c:	014400b4 	movhi	r5,4098
 10001380:	29419a04 	addi	r5,r5,1640
-10001384:	e1bbf217 	ldw	r6,-4152(fp)
+10001384:	e1bbf317 	ldw	r6,-4148(fp)
 10001388:	0003ff00 	call	10003ff0 <sprintf>
 			success = esp8266_send_command(cmd_buffer);
-1000138c:	e0bdfd84 	addi	r2,fp,-2058
+1000138c:	e0bbfd84 	addi	r2,fp,-4106
 10001390:	1009883a 	mov	r4,r2
 10001394:	00004a00 	call	100004a0 <esp8266_send_command>
-10001398:	e0bbf315 	stw	r2,-4148(fp)
+10001398:	e0bbf115 	stw	r2,-4156(fp)
 			success = esp8266_send_data(packet, j);
-1000139c:	e0bbfd84 	addi	r2,fp,-4106
+1000139c:	e0bdfd84 	addi	r2,fp,-2058
 100013a0:	1009883a 	mov	r4,r2
-100013a4:	e17bf217 	ldw	r5,-4152(fp)
+100013a4:	e17bf317 	ldw	r5,-4148(fp)
 100013a8:	00005c80 	call	100005c8 <esp8266_send_data>
-100013ac:	e0bbf315 	stw	r2,-4148(fp)
+100013ac:	e0bbf115 	stw	r2,-4156(fp)
 			j = 0;
-100013b0:	e03bf215 	stw	zero,-4152(fp)
+100013b0:	e03bf315 	stw	zero,-4148(fp)
 		}
 		// 封包 Buffer 滿時發送封包
 		if(j == PACKET_LEN) {
-100013b4:	e0bbf217 	ldw	r2,-4152(fp)
+100013b4:	e0bbf317 	ldw	r2,-4148(fp)
 100013b8:	10820018 	cmpnei	r2,r2,2048
 100013bc:	1000101e 	bne	r2,zero,10001400 <Send_File+0x238>
 			sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
-100013c0:	e0bdfd84 	addi	r2,fp,-2058
+100013c0:	e0bbfd84 	addi	r2,fp,-4106
 100013c4:	1009883a 	mov	r4,r2
 100013c8:	014400b4 	movhi	r5,4098
 100013cc:	29419a04 	addi	r5,r5,1640
-100013d0:	e1bbf217 	ldw	r6,-4152(fp)
+100013d0:	e1bbf317 	ldw	r6,-4148(fp)
 100013d4:	0003ff00 	call	10003ff0 <sprintf>
 			success = esp8266_send_command(cmd_buffer);
-100013d8:	e0bdfd84 	addi	r2,fp,-2058
+100013d8:	e0bbfd84 	addi	r2,fp,-4106
 100013dc:	1009883a 	mov	r4,r2
 100013e0:	00004a00 	call	100004a0 <esp8266_send_command>
-100013e4:	e0bbf315 	stw	r2,-4148(fp)
+100013e4:	e0bbf115 	stw	r2,-4156(fp)
 			success = esp8266_send_data(packet, j);
-100013e8:	e0bbfd84 	addi	r2,fp,-4106
+100013e8:	e0bdfd84 	addi	r2,fp,-2058
 100013ec:	1009883a 	mov	r4,r2
-100013f0:	e17bf217 	ldw	r5,-4152(fp)
+100013f0:	e17bf317 	ldw	r5,-4148(fp)
 100013f4:	00005c80 	call	100005c8 <esp8266_send_data>
-100013f8:	e0bbf315 	stw	r2,-4148(fp)
+100013f8:	e0bbf115 	stw	r2,-4156(fp)
 			j = 0;
-100013fc:	e03bf215 	stw	zero,-4152(fp)
+100013fc:	e03bf315 	stw	zero,-4148(fp)
 		}
 		// 遇到檔案結尾時發送封包
 		if(i == EOF_Byte) {
-10001400:	e0fbf117 	ldw	r3,-4156(fp)
-10001404:	e0bbf417 	ldw	r2,-4144(fp)
+10001400:	e0fbf217 	ldw	r3,-4152(fp)
+10001404:	e0bbf517 	ldw	r2,-4140(fp)
 10001408:	18800f1e 	bne	r3,r2,10001448 <Send_File+0x280>
 			sprintf(cmd_buffer, "AT+CIPSEND=%d", j);
-1000140c:	e0bdfd84 	addi	r2,fp,-2058
+1000140c:	e0bbfd84 	addi	r2,fp,-4106
 10001410:	1009883a 	mov	r4,r2
 10001414:	014400b4 	movhi	r5,4098
 10001418:	29419a04 	addi	r5,r5,1640
-1000141c:	e1bbf217 	ldw	r6,-4152(fp)
+1000141c:	e1bbf317 	ldw	r6,-4148(fp)
 10001420:	0003ff00 	call	10003ff0 <sprintf>
 			success = esp8266_send_command(cmd_buffer);
-10001424:	e0bdfd84 	addi	r2,fp,-2058
+10001424:	e0bbfd84 	addi	r2,fp,-4106
 10001428:	1009883a 	mov	r4,r2
 1000142c:	00004a00 	call	100004a0 <esp8266_send_command>
-10001430:	e0bbf315 	stw	r2,-4148(fp)
+10001430:	e0bbf115 	stw	r2,-4156(fp)
 			success = esp8266_send_data(packet, j);
-10001434:	e0bbfd84 	addi	r2,fp,-4106
+10001434:	e0bdfd84 	addi	r2,fp,-2058
 10001438:	1009883a 	mov	r4,r2
-1000143c:	e17bf217 	ldw	r5,-4152(fp)
+1000143c:	e17bf317 	ldw	r5,-4148(fp)
 10001440:	00005c80 	call	100005c8 <esp8266_send_data>
-10001444:	e0bbf315 	stw	r2,-4148(fp)
+10001444:	e0bbf115 	stw	r2,-4156(fp)
 		}
 		if(!success) {
-10001448:	e0bbf317 	ldw	r2,-4148(fp)
+10001448:	e0bbf117 	ldw	r2,-4156(fp)
 1000144c:	1000051e 	bne	r2,zero,10001464 <Send_File+0x29c>
 			printf("    (Info) Failed to Send Packet.\n");
 10001450:	010400b4 	movhi	r4,4098
@@ -2881,16 +2881,16 @@ bool Send_File(alt_u8 *list, alt_32 len) {
 			return false;
 1000145c:	0005883a 	mov	r2,zero
 10001460:	00002406 	br	100014f4 <Send_File+0x32c>
-	if(!success) {
-		printf("    (Info) Failed to Inform Data Size.\n");
 		return false;
 	}
 	// 開始發送封包
+	alt_32 EOF_Byte = len - 1;
+	alt_32 i, j = 0;
 	for(i=0; i<len; i++) {
-10001464:	e0bbf117 	ldw	r2,-4156(fp)
+10001464:	e0bbf217 	ldw	r2,-4152(fp)
 10001468:	10800044 	addi	r2,r2,1
-1000146c:	e0bbf115 	stw	r2,-4156(fp)
-10001470:	e0fbf117 	ldw	r3,-4156(fp)
+1000146c:	e0bbf215 	stw	r2,-4152(fp)
+10001470:	e0fbf217 	ldw	r3,-4152(fp)
 10001474:	e0bfff17 	ldw	r2,-4(fp)
 10001478:	18bfac16 	blt	r3,r2,1000132c <__alt_data_end+0xf800132c>
 			printf("    (Info) Failed to Send Packet.\n");
@@ -2899,30 +2899,30 @@ bool Send_File(alt_u8 *list, alt_32 len) {
 	}
 	// 發送檔案結束示意標記，並斷開連接
 	sprintf(cmd_buffer, "AT+CIPSEND=%d", 6);
-1000147c:	e0bdfd84 	addi	r2,fp,-2058
+1000147c:	e0bbfd84 	addi	r2,fp,-4106
 10001480:	1009883a 	mov	r4,r2
 10001484:	014400b4 	movhi	r5,4098
 10001488:	29419a04 	addi	r5,r5,1640
 1000148c:	01800184 	movi	r6,6
 10001490:	0003ff00 	call	10003ff0 <sprintf>
 	success = esp8266_send_command(cmd_buffer);
-10001494:	e0bdfd84 	addi	r2,fp,-2058
+10001494:	e0bbfd84 	addi	r2,fp,-4106
 10001498:	1009883a 	mov	r4,r2
 1000149c:	00004a00 	call	100004a0 <esp8266_send_command>
-100014a0:	e0bbf315 	stw	r2,-4148(fp)
+100014a0:	e0bbf115 	stw	r2,-4156(fp)
 	success = esp8266_send_data("EOFEOF", 6);
 100014a4:	010400b4 	movhi	r4,4098
 100014a8:	2101b104 	addi	r4,r4,1732
 100014ac:	01400184 	movi	r5,6
 100014b0:	00005c80 	call	100005c8 <esp8266_send_data>
-100014b4:	e0bbf315 	stw	r2,-4148(fp)
+100014b4:	e0bbf115 	stw	r2,-4156(fp)
 	success = esp8266_send_command("AT+CIPCLOSE");
 100014b8:	010400b4 	movhi	r4,4098
 100014bc:	2101b304 	addi	r4,r4,1740
 100014c0:	00004a00 	call	100004a0 <esp8266_send_command>
-100014c4:	e0bbf315 	stw	r2,-4148(fp)
+100014c4:	e0bbf115 	stw	r2,-4156(fp)
 	if(!success) {
-100014c8:	e0bbf317 	ldw	r2,-4148(fp)
+100014c8:	e0bbf117 	ldw	r2,-4156(fp)
 100014cc:	1000051e 	bne	r2,zero,100014e4 <Send_File+0x31c>
 		printf("    (Info) Failed to Disconnect Session.\n");
 100014d0:	010400b4 	movhi	r4,4098

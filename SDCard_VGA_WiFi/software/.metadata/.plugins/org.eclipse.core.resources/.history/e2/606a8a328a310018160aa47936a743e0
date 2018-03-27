@@ -27,7 +27,7 @@ void Write_BMP_Into_SD_Card(alt_u8 *list, alt_32 len);
 bool Display_On_VGA(alt_u8 *list, alt_32 len);
 bool Send_File(alt_u8 *list, alt_32 len);
 alt_u8 * Receive_File(alt_32 *len);
-alt_32 Get_Data_Len(alt_u8 *packet);
+alt_32 Get_File_Len(alt_u8 *packet);
 alt_32 Get_Packet_Len(alt_u8 *packet);
 
 int main() {
@@ -361,7 +361,7 @@ alt_u8 * Receive_File(alt_32 *len) {
 	while(1) {
 		packet = esp8266_listen();
 		if(strstr(packet, "FILE_LEN-") != NULL) {
-			*len = Get_Data_Len(packet);
+			*len = Get_File_Len(packet);
 			break;
 		}
 	}
@@ -398,11 +398,11 @@ alt_u8 * Receive_File(alt_32 *len) {
 	return list;
 }
 
-alt_32 Get_Data_Len(alt_u8 *packet) {
+alt_32 Get_File_Len(alt_u8 *packet) {
 	alt_32 packet_len = Get_Packet_Len(packet);
 	alt_32 digits = packet_len - 9;
-	alt_32 i;
 	alt_32 base = 1;
+	alt_32 i;
 	for(i=1; i<digits; i++)
 		base = base * 10;
 	alt_32 char_value;
@@ -417,16 +417,17 @@ alt_32 Get_Data_Len(alt_u8 *packet) {
 }
 
 alt_32 Get_Packet_Len(alt_u8 *packet) {
-	alt_32 i;
 	alt_32 char_value;
 	alt_32 len = 0;
 	alt_32 base = 1000;
 	alt_32 total_base = 10000;
+	alt_32 i;
 	for(i=7; i<12; i++) {
 		if(packet[i] != ':') {
 			char_value = packet[i] - '0';
 			len = len + (char_value * base);
-		} else
+		}
+		else
 			break;
 		base = base / 10;
 		total_base = total_base / 10;
