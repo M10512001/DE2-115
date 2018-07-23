@@ -1,0 +1,40 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Qsys_system.timer -pg 1 -lvl 2 -y 810
+preplace inst Qsys_system.altpll -pg 1 -lvl 2 -y 1210
+preplace inst Qsys_system.nios2_gen2.clock_bridge -pg 1
+preplace inst Qsys_system.nios2_gen2 -pg 1 -lvl 1 -y 770
+preplace inst Qsys_system.pio_chaos_shift -pg 1 -lvl 3 -y 1170
+preplace inst Qsys_system.pio_chaos_reset -pg 1 -lvl 3 -y 1430
+preplace inst Qsys_system.nios2_gen2.reset_bridge -pg 1
+preplace inst Qsys_system.sdram -pg 1 -lvl 2 -y 1090
+preplace inst Qsys_system.pio_chaos_step -pg 1 -lvl 3 -y 1330
+preplace inst Qsys_system.parallel_port_chaos_w -pg 1 -lvl 3 -y 30
+preplace inst Qsys_system.nios2_gen2.cpu -pg 1
+preplace inst Qsys_system.sysid -pg 1 -lvl 2 -y 970
+preplace inst Qsys_system.pio_chaos_done -pg 1 -lvl 3 -y 530
+preplace inst Qsys_system.parallel_port_chaos_x -pg 1 -lvl 3 -y 130
+preplace inst Qsys_system.jtag_uart -pg 1 -lvl 2 -y 670
+preplace inst Qsys_system.parallel_port_chaos_y -pg 1 -lvl 3 -y 230
+preplace inst Qsys_system.parallel_port_chaos_z -pg 1 -lvl 3 -y 430
+preplace inst Qsys_system.clk -pg 1 -lvl 1 -y 1230
+preplace inst Qsys_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.sdram_wire,(SLAVE)sdram.wire) 1 0 2 NJ 1160 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)parallel_port_chaos_x.external_interface,(SLAVE)Qsys_system.parallel_port_chaos_x) 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc FAN_OUT<net_container>Qsys_system</net_container>(SLAVE)pio_chaos_reset.clk,(SLAVE)timer.clk,(SLAVE)pio_chaos_shift.clk,(SLAVE)pio_chaos_step.clk,(SLAVE)nios2_gen2.clk,(SLAVE)parallel_port_chaos_y.clk,(SLAVE)pio_chaos_done.clk,(SLAVE)parallel_port_chaos_x.clk,(MASTER)altpll.c0,(SLAVE)parallel_port_chaos_z.clk,(SLAVE)parallel_port_chaos_w.clk,(SLAVE)sysid.clk,(SLAVE)sdram.clk,(SLAVE)jtag_uart.clk) 1 0 3 170 730 570 1060 930
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(MASTER)Qsys_system.sdram_clk,(MASTER)altpll.c1) 1 2 2 NJ 1280 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.pio_chaos_step,(SLAVE)pio_chaos_step.external_connection) 1 0 3 NJ 1380 NJ 1380 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)parallel_port_chaos_y.external_interface,(SLAVE)Qsys_system.parallel_port_chaos_y) 1 0 3 NJ 280 NJ 280 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.pio_chaos_shift,(SLAVE)pio_chaos_shift.external_connection) 1 0 3 NJ 1200 NJ 1200 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)clk.clk_in,(SLAVE)Qsys_system.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.reset,(SLAVE)clk.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)pio_chaos_done.external_connection,(SLAVE)Qsys_system.pio_chaos_done) 1 0 3 NJ 970 NJ 940 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)parallel_port_chaos_w.external_interface,(SLAVE)Qsys_system.parallel_port_chaos_w) 1 0 3 NJ 80 NJ 80 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)parallel_port_chaos_z.external_interface,(SLAVE)Qsys_system.parallel_port_chaos_z) 1 0 3 NJ 950 NJ 920 NJ
+preplace netloc FAN_OUT<net_container>Qsys_system</net_container>(SLAVE)jtag_uart.irq,(MASTER)nios2_gen2.irq,(SLAVE)timer.irq) 1 1 1 590
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)pio_chaos_reset.external_connection,(SLAVE)Qsys_system.pio_chaos_reset) 1 0 3 NJ 1460 NJ 1460 NJ
+preplace netloc POINT_TO_POINT<net_container>Qsys_system</net_container>(MASTER)clk.clk,(SLAVE)altpll.inclk_interface) 1 1 1 N
+preplace netloc INTERCONNECT<net_container>Qsys_system</net_container>(SLAVE)sysid.control_slave,(SLAVE)pio_chaos_step.s1,(SLAVE)pio_chaos_shift.s1,(SLAVE)parallel_port_chaos_x.avalon_parallel_port_slave,(SLAVE)sdram.s1,(SLAVE)nios2_gen2.debug_mem_slave,(SLAVE)pio_chaos_done.s1,(SLAVE)parallel_port_chaos_y.avalon_parallel_port_slave,(MASTER)nios2_gen2.data_master,(SLAVE)pio_chaos_reset.s1,(SLAVE)altpll.pll_slave,(SLAVE)parallel_port_chaos_w.avalon_parallel_port_slave,(MASTER)nios2_gen2.instruction_master,(SLAVE)timer.s1,(SLAVE)parallel_port_chaos_z.avalon_parallel_port_slave,(SLAVE)jtag_uart.avalon_jtag_slave) 1 0 3 170 910 550 1400 870
+preplace netloc INTERCONNECT<net_container>Qsys_system</net_container>(SLAVE)pio_chaos_shift.reset,(SLAVE)pio_chaos_done.reset,(SLAVE)parallel_port_chaos_z.reset,(SLAVE)nios2_gen2.reset,(SLAVE)pio_chaos_reset.reset,(MASTER)nios2_gen2.debug_reset_request,(SLAVE)sysid.reset,(SLAVE)parallel_port_chaos_x.reset,(SLAVE)altpll.inclk_interface_reset,(SLAVE)parallel_port_chaos_w.reset,(SLAVE)jtag_uart.reset,(SLAVE)pio_chaos_step.reset,(SLAVE)sdram.reset,(SLAVE)timer.reset,(SLAVE)parallel_port_chaos_y.reset,(MASTER)clk.clk_reset) 1 0 3 190 930 610 1360 950
+levelinfo -pg 1 0 140 1320
+levelinfo -hier Qsys_system 150 310 680 1040 1230

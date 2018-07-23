@@ -1,0 +1,66 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <system.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <altera_avalon_pio_regs.h>
+
+int main() {
+	int num;
+	float shift;
+	unsigned u;
+	printf("step %d\n", IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_STEP_BASE));
+	printf("reset %d\n", IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_RESET_BASE));
+	printf("shift %X\n", IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_SHIFT_BASE));
+	printf("done %d\n", IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_DONE_BASE));
+	printf("Insert Number of Chaos Key Steps\n");
+	scanf("%d", &num);
+	printf("Insert Shift of Chaos Key\n");
+	scanf("%f", &shift);
+	u = *(unsigned*)&shift;
+	printf("%x\n", u);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_STEP_BASE, 0);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_RESET_BASE, 1);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_RESET_BASE, 0);
+	printf("step %d\n", IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_STEP_BASE));
+	printf("reset %d\n", IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_RESET_BASE));
+	printf("done %d\n", IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_DONE_BASE));
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_SHIFT_BASE, u);
+	printf("shift %x\n", IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_SHIFT_BASE));
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_STEP_BASE, 1);
+	alt_u8 *list = malloc(num * sizeof(alt_u8));
+	alt_32 i = 0;
+	while(1) {
+		if(IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_DONE_BASE) == 0)
+			continue;
+		list[i] = IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_X_BASE);
+		i ++;
+		list[i] = IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_Y_BASE);
+		i ++;
+		list[i] = IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_Z_BASE);
+		i ++;
+		list[i] = IORD_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_W_BASE);
+		i ++;
+		if(i == num)
+			break;
+		IOWR_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_STEP_BASE, 0);
+		IOWR_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_STEP_BASE, 1);
+	}
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_CHAOS_STEP_BASE, 0);
+	printf("done");
+	return 0;
+}

@@ -1,0 +1,9 @@
+18:42:42 **** Build of configuration Nios II for project Chaos_Encryp_System ****
+make all 
+Info: Building ../Chaos_Encryp_System_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Chaos_Encryp_System_bsp/
+[BSP build complete]
+[Chaos_Encryp_System build complete]
+
+18:42:44 Build Finished (took 1s.895ms)
+

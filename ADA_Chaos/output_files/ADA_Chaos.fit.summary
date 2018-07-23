@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Mar 27 15:23:26 2018
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : ADA_Chaos
+Top-level Entity Name : ADA_Chaos
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 9,305 / 114,480 ( 8 % )
+    Total combinational functions : 8,762 / 114,480 ( 8 % )
+    Dedicated logic registers : 5,051 / 114,480 ( 4 % )
+Total registers : 5051
+Total pins : 41 / 529 ( 8 % )
+Total virtual pins : 0
+Total memory bits : 458 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 56 / 532 ( 11 % )
+Total PLLs : 1 / 4 ( 25 % )

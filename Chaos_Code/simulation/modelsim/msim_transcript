@@ -1,0 +1,190 @@
+# do Chaos_Code_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code {C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Chaos_Code.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:44:42 on Mar 27,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code" C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Chaos_Code.v 
+# -- Compiling module Chaos_Code
+# 
+# Top level modules:
+# 	Chaos_Code
+# End time: 15:44:42 on Mar 27,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code {C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Fp_Add.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:44:42 on Mar 27,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code" C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Fp_Add.v 
+# -- Compiling module Fp_Add_altbarrel_shift_35e
+# -- Compiling module Fp_Add_altbarrel_shift_olb
+# -- Compiling module Fp_Add_altpriority_encoder_3e8
+# -- Compiling module Fp_Add_altpriority_encoder_6e8
+# -- Compiling module Fp_Add_altpriority_encoder_be8
+# -- Compiling module Fp_Add_altpriority_encoder_3v7
+# -- Compiling module Fp_Add_altpriority_encoder_6v7
+# -- Compiling module Fp_Add_altpriority_encoder_bv7
+# -- Compiling module Fp_Add_altpriority_encoder_r08
+# -- Compiling module Fp_Add_altpriority_encoder_rf8
+# -- Compiling module Fp_Add_altpriority_encoder_qb6
+# -- Compiling module Fp_Add_altpriority_encoder_nh8
+# -- Compiling module Fp_Add_altpriority_encoder_qh8
+# -- Compiling module Fp_Add_altpriority_encoder_vh8
+# -- Compiling module Fp_Add_altpriority_encoder_fj8
+# -- Compiling module Fp_Add_altpriority_encoder_n28
+# -- Compiling module Fp_Add_altpriority_encoder_q28
+# -- Compiling module Fp_Add_altpriority_encoder_v28
+# -- Compiling module Fp_Add_altpriority_encoder_f48
+# -- Compiling module Fp_Add_altpriority_encoder_e48
+# -- Compiling module Fp_Add_altfp_add_sub_55j
+# -- Compiling module Fp_Add
+# 
+# Top level modules:
+# 	Fp_Add
+# End time: 15:44:43 on Mar 27,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code {C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Fp_Sub.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:44:43 on Mar 27,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code" C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Fp_Sub.v 
+# -- Compiling module Fp_Sub_altbarrel_shift_35e
+# -- Compiling module Fp_Sub_altbarrel_shift_olb
+# -- Compiling module Fp_Sub_altpriority_encoder_3e8
+# -- Compiling module Fp_Sub_altpriority_encoder_6e8
+# -- Compiling module Fp_Sub_altpriority_encoder_be8
+# -- Compiling module Fp_Sub_altpriority_encoder_3v7
+# -- Compiling module Fp_Sub_altpriority_encoder_6v7
+# -- Compiling module Fp_Sub_altpriority_encoder_bv7
+# -- Compiling module Fp_Sub_altpriority_encoder_r08
+# -- Compiling module Fp_Sub_altpriority_encoder_rf8
+# -- Compiling module Fp_Sub_altpriority_encoder_qb6
+# -- Compiling module Fp_Sub_altpriority_encoder_nh8
+# -- Compiling module Fp_Sub_altpriority_encoder_qh8
+# -- Compiling module Fp_Sub_altpriority_encoder_vh8
+# -- Compiling module Fp_Sub_altpriority_encoder_fj8
+# -- Compiling module Fp_Sub_altpriority_encoder_n28
+# -- Compiling module Fp_Sub_altpriority_encoder_q28
+# -- Compiling module Fp_Sub_altpriority_encoder_v28
+# -- Compiling module Fp_Sub_altpriority_encoder_f48
+# -- Compiling module Fp_Sub_altpriority_encoder_e48
+# -- Compiling module Fp_Sub_altfp_add_sub_66j
+# -- Compiling module Fp_Sub
+# 
+# Top level modules:
+# 	Fp_Sub
+# End time: 15:44:43 on Mar 27,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code {C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Fp_Mul.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:44:43 on Mar 27,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code" C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Fp_Mul.v 
+# -- Compiling module Fp_Mul_altfp_mult_trn
+# -- Compiling module Fp_Mul
+# 
+# Top level modules:
+# 	Fp_Mul
+# End time: 15:44:43 on Mar 27,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code {C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Fp_Con.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:44:43 on Mar 27,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code" C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/Fp_Con.v 
+# -- Compiling module Fp_Con_altbarrel_shift_20g
+# -- Compiling module Fp_Con_altfp_convert_l1n
+# -- Compiling module Fp_Con
+# 
+# Top level modules:
+# 	Fp_Con
+# End time: 15:44:44 on Mar 27,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/simulation/modelsim {C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/simulation/modelsim/Chaos_Code.vt}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:44:44 on Mar 27,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/simulation/modelsim" C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/simulation/modelsim/Chaos_Code.vt 
+# -- Compiling module Chaos_Code_vlg_tst
+# 
+# Top level modules:
+# 	Chaos_Code_vlg_tst
+# End time: 15:44:44 on Mar 27,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Chaos_Code_vlg_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" Chaos_Code_vlg_tst 
+# Start time: 15:44:44 on Mar 27,2018
+# Loading work.Chaos_Code_vlg_tst
+# Loading work.Chaos_Code
+# Loading work.Fp_Add
+# Loading work.Fp_Add_altfp_add_sub_55j
+# Loading work.Fp_Add_altbarrel_shift_35e
+# Loading work.Fp_Add_altbarrel_shift_olb
+# Loading work.Fp_Add_altpriority_encoder_qb6
+# Loading work.Fp_Add_altpriority_encoder_r08
+# Loading work.Fp_Add_altpriority_encoder_be8
+# Loading work.Fp_Add_altpriority_encoder_6e8
+# Loading work.Fp_Add_altpriority_encoder_3e8
+# Loading work.Fp_Add_altpriority_encoder_bv7
+# Loading work.Fp_Add_altpriority_encoder_6v7
+# Loading work.Fp_Add_altpriority_encoder_3v7
+# Loading work.Fp_Add_altpriority_encoder_rf8
+# Loading work.Fp_Add_altpriority_encoder_e48
+# Loading work.Fp_Add_altpriority_encoder_fj8
+# Loading work.Fp_Add_altpriority_encoder_vh8
+# Loading work.Fp_Add_altpriority_encoder_qh8
+# Loading work.Fp_Add_altpriority_encoder_nh8
+# Loading work.Fp_Add_altpriority_encoder_f48
+# Loading work.Fp_Add_altpriority_encoder_v28
+# Loading work.Fp_Add_altpriority_encoder_q28
+# Loading work.Fp_Add_altpriority_encoder_n28
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_compare
+# Loading work.Fp_Sub
+# Loading work.Fp_Sub_altfp_add_sub_66j
+# Loading work.Fp_Sub_altbarrel_shift_35e
+# Loading work.Fp_Sub_altbarrel_shift_olb
+# Loading work.Fp_Sub_altpriority_encoder_qb6
+# Loading work.Fp_Sub_altpriority_encoder_r08
+# Loading work.Fp_Sub_altpriority_encoder_be8
+# Loading work.Fp_Sub_altpriority_encoder_6e8
+# Loading work.Fp_Sub_altpriority_encoder_3e8
+# Loading work.Fp_Sub_altpriority_encoder_bv7
+# Loading work.Fp_Sub_altpriority_encoder_6v7
+# Loading work.Fp_Sub_altpriority_encoder_3v7
+# Loading work.Fp_Sub_altpriority_encoder_rf8
+# Loading work.Fp_Sub_altpriority_encoder_e48
+# Loading work.Fp_Sub_altpriority_encoder_fj8
+# Loading work.Fp_Sub_altpriority_encoder_vh8
+# Loading work.Fp_Sub_altpriority_encoder_qh8
+# Loading work.Fp_Sub_altpriority_encoder_nh8
+# Loading work.Fp_Sub_altpriority_encoder_f48
+# Loading work.Fp_Sub_altpriority_encoder_v28
+# Loading work.Fp_Sub_altpriority_encoder_q28
+# Loading work.Fp_Sub_altpriority_encoder_n28
+# Loading work.Fp_Mul
+# Loading work.Fp_Mul_altfp_mult_trn
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading work.Fp_Con
+# Loading work.Fp_Con_altfp_convert_l1n
+# Loading work.Fp_Con_altbarrel_shift_20g
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/simulation/modelsim/Chaos_Code.vt(107)
+#    Time: 24120 ps  Iteration: 0  Instance: /Chaos_Code_vlg_tst
+# Break in Module Chaos_Code_vlg_tst at C:/Users/M10512001/Desktop/DE2-115/Chaos_Code/simulation/modelsim/Chaos_Code.vt line 107
+# End time: 15:45:06 on Mar 27,2018, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 0

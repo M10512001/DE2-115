@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Mar 27 15:21:47 2018
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : Chaos_Generator
+Top-level Entity Name : Chaos_Generator
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 8,276 / 114,480 ( 7 % )
+    Total combinational functions : 7,828 / 114,480 ( 7 % )
+    Dedicated logic registers : 4,693 / 114,480 ( 4 % )
+Total registers : 4693
+Total pins : 130 / 529 ( 25 % )
+Total virtual pins : 0
+Total memory bits : 458 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 56 / 532 ( 11 % )
+Total PLLs : 0 / 4 ( 0 % )

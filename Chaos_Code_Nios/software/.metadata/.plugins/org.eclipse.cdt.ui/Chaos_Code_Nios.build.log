@@ -1,0 +1,29 @@
+19:59:10 **** Incremental Build of configuration Nios II for project Chaos_Code_Nios ****
+make all 
+Info: Building ../Chaos_Code_Nios_bsp/
+C:/altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Chaos_Code_Nios_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Chaos_Code_Nios_bsp//HAL/inc -I../Chaos_Code_Nios_bsp/ -I../Chaos_Code_Nios_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:46:3: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+   alt_u8 *list = malloc(num * sizeof(alt_u8));
+   ^
+main.c:46:18: warning: incompatible implicit declaration of built-in function 'malloc'
+   alt_u8 *list = malloc(num * sizeof(alt_u8));
+                  ^
+main.c:78:3: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+   free(list);
+   ^
+main.c:78:3: warning: incompatible implicit declaration of built-in function 'free'
+Info: Linking Chaos_Code_Nios.elf
+nios2-elf-g++  -T'../Chaos_Code_Nios_bsp//linker.x' -msys-crt0='../Chaos_Code_Nios_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Chaos_Code_Nios_bsp/   -Wl,-Map=Chaos_Code_Nios.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o Chaos_Code_Nios.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Chaos_Code_Nios.elf --thread_model hal --cpu_name nios2_gen2 --qsys true --simulation_enabled false --id 0 --sidp 0x100010b0 --timestamp 1522148630 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Qsys_system --quartus_project_dir "C:/Users/M10512001/Desktop/DE2-115/Chaos_Code_Nios" --jdi ../..//output_files/Chaos_Code_Nios.jdi --sopcinfo C:/Users/M10512001/Desktop/DE2-115/Chaos_Code_Nios/software/Chaos_Code_Nios_bsp/../../Qsys_system.sopcinfo
+Info: (Chaos_Code_Nios.elf) 103 KBytes program size (code + initialized data).
+Info:                       130961 KBytes free for stack + heap.
+Info: Creating Chaos_Code_Nios.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Chaos_Code_Nios.elf >Chaos_Code_Nios.objdump
+[Chaos_Code_Nios build complete]
+
+19:59:13 Build Finished (took 3s.439ms)
+

@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Generator {C:/Users/M10512001/Desktop/DE2-115/Chaos_Generator/Fp_Add.v}
+vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Generator {C:/Users/M10512001/Desktop/DE2-115/Chaos_Generator/Fp_Sub.v}
+vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Generator {C:/Users/M10512001/Desktop/DE2-115/Chaos_Generator/Fp_Mul.v}
+vlog -vlog01compat -work work +incdir+C:/Users/M10512001/Desktop/DE2-115/Chaos_Generator {C:/Users/M10512001/Desktop/DE2-115/Chaos_Generator/Chaos_Generator.v}
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 27 19:45:30 2018
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : Chaos_Code_Nios
+Top-level Entity Name : Chaos_Code_Nios
+Family : Cyclone IV E
+Total logic elements : 15,307
+    Total combinational functions : 12,831
+    Dedicated logic registers : 8,560
+Total registers : 8560
+Total pins : 59
+Total virtual pins : 0
+Total memory bits : 66,194
+Embedded Multiplier 9-bit elements : 62
+Total PLLs : 1

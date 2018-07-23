@@ -1,0 +1,146 @@
+Flow report for Chaos_Code_Nios
+Tue Mar 27 19:47:30 2018
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Tue Mar 27 19:47:30 2018           ;
+; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
+; Revision Name                      ; Chaos_Code_Nios                                 ;
+; Top-level Entity Name              ; Chaos_Code_Nios                                 ;
+; Family                             ; Cyclone IV E                                    ;
+; Device                             ; EP4CE115F29C7                                   ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 14,107 / 114,480 ( 12 % )                       ;
+;     Total combinational functions  ; 12,840 / 114,480 ( 11 % )                       ;
+;     Dedicated logic registers      ; 8,433 / 114,480 ( 7 % )                         ;
+; Total registers                    ; 8552                                            ;
+; Total pins                         ; 59 / 529 ( 11 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 66,194 / 3,981,312 ( 2 % )                      ;
+; Embedded Multiplier 9-bit elements ; 62 / 532 ( 12 % )                               ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/27/2018 19:43:58 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Chaos_Code_Nios     ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                   ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 202383172174089.152215103701424                               ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                   ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                     ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; Qsys_system/synthesis/../Qsys_system.cmp                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; Qsys_system/synthesis/../../Qsys_system.qsys                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; Fp_Add_bb.v                                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; Fp_Sub_bb.v                                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; Fp_Mul.bsf                                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; Fp_Mul_inst.v                                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; Fp_Mul_bb.v                                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; Fp_Mul.inc                                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; Fp_Mul.cmp                                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; Fp_Con_bb.v                                                   ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                          ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                      ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                         ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                        ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                           ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --          ; --             ;
+; SLD_FILE                            ; Qsys_system/synthesis/Qsys_system.regmap                      ; --            ; --          ; --             ;
+; SLD_FILE                            ; Qsys_system/synthesis/Qsys_system.debuginfo                   ; --            ; --          ; --             ;
+; SLD_INFO                            ; QSYS_NAME Qsys_system HAS_SOPCINFO 1 GENERATION_ID 1522148630 ; --            ; Qsys_system ; --             ;
+; SOPCINFO_FILE                       ; Qsys_system/synthesis/../../Qsys_system.sopcinfo              ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --             ;
++-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:01:25     ; 1.0                     ; 1223 MB             ; 00:02:00                           ;
+; Fitter                    ; 00:01:03     ; 1.0                     ; 2161 MB             ; 00:01:35                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 854 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.4                     ; 1120 MB             ; 00:00:10                           ;
+; EDA Netlist Writer        ; 00:00:15     ; 1.0                     ; 918 MB              ; 00:00:14                           ;
+; Total                     ; 00:02:58     ; --                      ; --                  ; 00:04:05                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-CIU62I1  ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-CIU62I1  ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-CIU62I1  ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-CIU62I1  ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-CIU62I1  ; Windows 8 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Chaos_Code_Nios -c Chaos_Code_Nios
+quartus_fit --read_settings_files=off --write_settings_files=off Chaos_Code_Nios -c Chaos_Code_Nios
+quartus_asm --read_settings_files=off --write_settings_files=off Chaos_Code_Nios -c Chaos_Code_Nios
+quartus_sta Chaos_Code_Nios -c Chaos_Code_Nios
+quartus_eda --read_settings_files=off --write_settings_files=off Chaos_Code_Nios -c Chaos_Code_Nios
+
+
+

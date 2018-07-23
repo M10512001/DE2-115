@@ -1,0 +1,66 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "11/02/2017 16:25:11"
+                                                                                
+// Verilog Test Bench template for design : Chaos_Generator
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module Chaos_Generator_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg CLK;
+reg ENABLE;
+// wires                                               
+wire [31:0]  CHAOS_W;
+wire [31:0]  CHAOS_X;
+wire [31:0]  CHAOS_Y;
+wire [31:0]  CHAOS_Z;
+
+// assign statements (if any)                          
+Chaos_Generator i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.ENABLE(ENABLE),
+	.CHAOS_X(CHAOS_X),
+	.CHAOS_Y(CHAOS_Y),
+	.CHAOS_Z(CHAOS_Z),
+	.CHAOS_W(CHAOS_W)
+);
+initial                                                
+begin
+	#0			CLK = 1'b0;
+	#0			ENABLE = 1'b0;
+	#10		ENABLE = 1'b1;
+	#86580	ENABLE = 1'b0;
+	#10	$stop;
+end
+
+always  #10
+begin
+	CLK = ~CLK;
+end
+                                                   
+endmodule

@@ -1,0 +1,281 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DONE",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_X[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_X[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_X[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_X[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_X[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_X[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_X[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_X[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Y[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Y[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Y[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Y[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Y[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Y[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Z[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Z[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Z[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Z[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Z[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Z[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Z[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_Z[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_W[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_W[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_W[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_W[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_W[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_W[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_W[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CODE_W[7]",
+					"strict" : false
+				},
+				{
+					"name" : "STEP",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[31]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[23]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[24]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[25]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[26]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[27]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[28]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[29]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[30]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[20]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[21]",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT[22]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

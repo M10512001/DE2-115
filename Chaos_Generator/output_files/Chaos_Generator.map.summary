@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 27 15:20:27 2018
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : Chaos_Generator
+Top-level Entity Name : Chaos_Generator
+Family : Cyclone IV E
+Total logic elements : 8,875
+    Total combinational functions : 7,828
+    Dedicated logic registers : 4,693
+Total registers : 4693
+Total pins : 130
+Total virtual pins : 0
+Total memory bits : 458
+Embedded Multiplier 9-bit elements : 56
+Total PLLs : 0

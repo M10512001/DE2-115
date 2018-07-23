@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 27 15:22:35 2018
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : ADA_Chaos
+Top-level Entity Name : ADA_Chaos
+Family : Cyclone IV E
+Total logic elements : 9,930
+    Total combinational functions : 8,762
+    Dedicated logic registers : 5,051
+Total registers : 5051
+Total pins : 41
+Total virtual pins : 0
+Total memory bits : 458
+Embedded Multiplier 9-bit elements : 56
+Total PLLs : 1

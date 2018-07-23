@@ -1,0 +1,104 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+# Date created = 13:40:57  November 29, 2017
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		ADA_Chaos_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY ADA_Chaos
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:40:57  NOVEMBER 29, 2017"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE ADA_Chaos.v
+set_global_assignment -name VERILOG_FILE Chaos_Generator.v
+set_global_assignment -name QIP_FILE Fp_Add.qip
+set_global_assignment -name QIP_FILE Fp_Sub.qip
+set_global_assignment -name QIP_FILE Fp_Mul.qip
+set_global_assignment -name QIP_FILE PLL.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_Y2 -to CLK_50
+set_location_assignment PIN_AF25 -to DAC_CLK_A
+set_location_assignment PIN_AE22 -to DAC_CLK_B
+set_location_assignment PIN_AC15 -to DAC_DA[13]
+set_location_assignment PIN_Y17 -to DAC_DA[12]
+set_location_assignment PIN_AC21 -to DAC_DA[11]
+set_location_assignment PIN_AD21 -to DAC_DA[10]
+set_location_assignment PIN_Y16 -to DAC_DA[9]
+set_location_assignment PIN_AE16 -to DAC_DA[8]
+set_location_assignment PIN_AD15 -to DAC_DA[7]
+set_location_assignment PIN_AC19 -to DAC_DA[6]
+set_location_assignment PIN_AE15 -to DAC_DA[5]
+set_location_assignment PIN_AF16 -to DAC_DA[4]
+set_location_assignment PIN_AD19 -to DAC_DA[3]
+set_location_assignment PIN_AF24 -to DAC_DA[2]
+set_location_assignment PIN_AF15 -to DAC_DA[1]
+set_location_assignment PIN_AE21 -to DAC_DA[0]
+set_location_assignment PIN_AF21 -to DAC_DB[13]
+set_location_assignment PIN_AD22 -to DAC_DB[12]
+set_location_assignment PIN_AG25 -to DAC_DB[11]
+set_location_assignment PIN_AH25 -to DAC_DB[10]
+set_location_assignment PIN_AD25 -to DAC_DB[9]
+set_location_assignment PIN_AE25 -to DAC_DB[8]
+set_location_assignment PIN_AE24 -to DAC_DB[7]
+set_location_assignment PIN_AF26 -to DAC_DB[6]
+set_location_assignment PIN_AG22 -to DAC_DB[5]
+set_location_assignment PIN_AH22 -to DAC_DB[4]
+set_location_assignment PIN_AG23 -to DAC_DB[3]
+set_location_assignment PIN_AH26 -to DAC_DB[2]
+set_location_assignment PIN_AE20 -to DAC_DB[1]
+set_location_assignment PIN_AF20 -to DAC_DB[0]
+set_location_assignment PIN_AG26 -to DAC_MODE
+set_location_assignment PIN_AC22 -to DAC_WRT_A
+set_location_assignment PIN_AH23 -to DAC_WRT_B
+set_location_assignment PIN_AB21 -to OSC_SMA_ADC4
+set_location_assignment PIN_AB22 -to SMA_DAC4
+set_location_assignment PIN_AB27 -to SW[4]
+set_location_assignment PIN_AD27 -to SW[3]
+set_location_assignment PIN_AC27 -to SW[2]
+set_location_assignment PIN_AC28 -to SW[1]
+set_location_assignment PIN_AB28 -to SW[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

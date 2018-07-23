@@ -1,0 +1,40 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Qsys_system.timer -pg 1 -lvl 2 -y 130
+preplace inst Qsys_system.pio_chaos_z -pg 1 -lvl 2 -y 1010
+preplace inst Qsys_system.altpll -pg 1 -lvl 2 -y 1230
+preplace inst Qsys_system.nios2_gen2.clock_bridge -pg 1
+preplace inst Qsys_system.nios2_gen2 -pg 1 -lvl 1 -y 100
+preplace inst Qsys_system.pio_chaos_shift -pg 1 -lvl 2 -y 510
+preplace inst Qsys_system.pio_chaos_reset -pg 1 -lvl 2 -y 330
+preplace inst Qsys_system.nios2_gen2.reset_bridge -pg 1
+preplace inst Qsys_system.sdram -pg 1 -lvl 2 -y 1110
+preplace inst Qsys_system.pio_chaos_step -pg 1 -lvl 2 -y 610
+preplace inst Qsys_system.nios2_gen2.cpu -pg 1
+preplace inst Qsys_system.sysid -pg 1 -lvl 2 -y 430
+preplace inst Qsys_system.pio_chaos_w -pg 1 -lvl 2 -y 710
+preplace inst Qsys_system.pio_chaos_done -pg 1 -lvl 2 -y 230
+preplace inst Qsys_system.jtag_uart -pg 1 -lvl 2 -y 30
+preplace inst Qsys_system.pio_chaos_x -pg 1 -lvl 2 -y 810
+preplace inst Qsys_system.pio_chaos_y -pg 1 -lvl 2 -y 910
+preplace inst Qsys_system.clk -pg 1 -lvl 1 -y 1250
+preplace inst Qsys_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc INTERCONNECT<net_container>Qsys_system</net_container>(SLAVE)sdram.reset,(SLAVE)pio_chaos_y.reset,(SLAVE)pio_chaos_step.reset,(SLAVE)pio_chaos_reset.reset,(SLAVE)pio_chaos_done.reset,(SLAVE)nios2_gen2.reset,(SLAVE)altpll.inclk_interface_reset,(SLAVE)pio_chaos_z.reset,(SLAVE)sysid.reset,(SLAVE)pio_chaos_x.reset,(SLAVE)timer.reset,(MASTER)clk.clk_reset,(SLAVE)pio_chaos_shift.reset,(MASTER)nios2_gen2.debug_reset_request,(SLAVE)pio_chaos_w.reset,(SLAVE)jtag_uart.reset) 1 0 2 180 260 560
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.sdram_wire,(SLAVE)sdram.wire) 1 0 2 NJ 1180 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(MASTER)Qsys_system.sdram_clk,(MASTER)altpll.c1) 1 2 1 N
+preplace netloc FAN_OUT<net_container>Qsys_system</net_container>(SLAVE)sysid.clk,(SLAVE)timer.clk,(SLAVE)pio_chaos_x.clk,(SLAVE)pio_chaos_w.clk,(SLAVE)nios2_gen2.clk,(SLAVE)sdram.clk,(SLAVE)pio_chaos_done.clk,(MASTER)altpll.c0,(SLAVE)jtag_uart.clk,(SLAVE)pio_chaos_reset.clk,(SLAVE)pio_chaos_y.clk,(SLAVE)pio_chaos_shift.clk,(SLAVE)pio_chaos_z.clk,(SLAVE)pio_chaos_step.clk) 1 0 3 160 240 600 1220 840
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)pio_chaos_step.external_connection,(SLAVE)Qsys_system.pio_chaos_step) 1 0 2 NJ 640 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)pio_chaos_y.external_connection,(SLAVE)Qsys_system.pio_chaos_y_wire) 1 0 2 NJ 940 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.pio_chaos_shift,(SLAVE)pio_chaos_shift.external_connection) 1 0 2 NJ 540 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.reset,(SLAVE)clk.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.pio_chaos_x_wire,(SLAVE)pio_chaos_x.external_connection) 1 0 2 NJ 840 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.pio_chaos_w_wire,(SLAVE)pio_chaos_w.external_connection) 1 0 2 NJ 740 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.pio_chaos_done,(SLAVE)pio_chaos_done.external_connection) 1 0 2 NJ 300 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)pio_chaos_reset.external_connection,(SLAVE)Qsys_system.pio_chaos_reset) 1 0 2 NJ 360 NJ
+preplace netloc POINT_TO_POINT<net_container>Qsys_system</net_container>(MASTER)clk.clk,(SLAVE)altpll.inclk_interface) 1 1 1 N
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.pio_chaos_z_wire,(SLAVE)pio_chaos_z.external_connection) 1 0 2 NJ 1040 NJ
+preplace netloc EXPORT<net_container>Qsys_system</net_container>(SLAVE)Qsys_system.clk,(SLAVE)clk.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>Qsys_system</net_container>(MASTER)nios2_gen2.irq,(SLAVE)jtag_uart.irq,(SLAVE)timer.irq) 1 1 1 580
+preplace netloc INTERCONNECT<net_container>Qsys_system</net_container>(MASTER)nios2_gen2.data_master,(SLAVE)nios2_gen2.debug_mem_slave,(SLAVE)pio_chaos_shift.s1,(SLAVE)pio_chaos_reset.s1,(MASTER)nios2_gen2.instruction_master,(SLAVE)pio_chaos_w.s1,(SLAVE)pio_chaos_done.s1,(SLAVE)pio_chaos_z.s1,(SLAVE)pio_chaos_x.s1,(SLAVE)pio_chaos_step.s1,(SLAVE)sdram.s1,(SLAVE)altpll.pll_slave,(SLAVE)pio_chaos_y.s1,(SLAVE)timer.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sysid.control_slave) 1 0 2 140 280 540
+levelinfo -pg 1 0 110 950
+levelinfo -hier Qsys_system 120 300 650 860
